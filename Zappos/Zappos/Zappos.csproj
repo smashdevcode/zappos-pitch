@@ -108,7 +108,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\PitchItemDataTemplateSelector.cs" />
-    <Compile Include="Common\TemplateSelector.cs" />
     <Compile Include="DataModel\DataSource.cs" />
     <Compile Include="GroupedItemsPage.xaml.cs">
       <DependentUpon>GroupedItemsPage.xaml</DependentUpon>

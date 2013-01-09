@@ -13,16 +13,6 @@
 		<!--<Setter Property="Background" Value="{StaticResource ZapposBackgroundBrush}"/>-->
 	</Style>
 
-	<!-- JCTODO remove -->
-	<!--<DataTemplate x:Key="SelectingTemplate">
-		<local:PitchItemTemplateSelector 
-			Content="{Binding}"
-			ItemTemplateStandard="{StaticResource ItemTemplate250x250}"
-			ItemTemplateTall="{StaticResource ItemTemplate250x510}"
-			ItemTemplateWide="{StaticResource ItemTemplate510x250}"
-			HorizontalAlignment="Stretch"/>
-	</DataTemplate>-->
-
 	<DataTemplate x:Key="ItemTemplate250x250">
 		<Grid HorizontalAlignment="Left" Width="250" Height="250">
 			<Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
