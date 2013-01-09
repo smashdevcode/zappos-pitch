@@ -12,6 +12,25 @@
 	<Style x:Key="ZapposLayoutRootStyle" TargetType="Panel" BasedOn="{StaticResource LayoutRootStyle}">
 		<!--<Setter Property="Background" Value="{StaticResource ZapposBackgroundBrush}"/>-->
 	</Style>
+	
+	<BitmapImage x:Key="ZapposHeaderLogo" UriSource="/Assets/ZapposHeaderLogo.png"/>
+
+	<Style x:Key="TitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+		<Setter Property="FontWeight" Value="SemiBold"/>
+		<Setter Property="FontSize" Value="22"/>
+		<Setter Property="LineHeight" Value="25"/>
+	</Style>
+
+	<Style x:Key="ItemTemplateTextOnlyTitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontSize" Value="26"/>
+		<Setter Property="LineHeight" Value="28"/>
+	</Style>
+
+	<Style x:Key="ItemTemplateTextOnlyCaptionTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="{StaticResource ApplicationSecondaryForegroundThemeBrush}"/>
+	</Style>
 
 	<DataTemplate x:Key="ItemTemplate250x250">
 		<Grid HorizontalAlignment="Left" Width="250" Height="250">
@@ -19,8 +38,10 @@
 				<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
 			</Border>
 			<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
-				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
-				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" 
+						   Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,10,15,0"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" 
+						   Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
 			</StackPanel>
 		</Grid>
 	</DataTemplate>
@@ -31,8 +52,10 @@
 				<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
 			</Border>
 			<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
-				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
-				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" 
+						   Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,10,15,0"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" 
+						   Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
 			</StackPanel>
 		</Grid>
 	</DataTemplate>
@@ -43,8 +66,50 @@
 				<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
 			</Border>
 			<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
-				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
-				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" 
+						   Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,10,15,0"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" 
+						   Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+			</StackPanel>
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="ItemTemplateWithArrow510x250">
+		<Grid HorizontalAlignment="Left" Width="510" Height="250">
+			<Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+				<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+			</Border>
+			<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" 
+						   Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,10,15,0"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" 
+						   Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+			</StackPanel>
+			<Image Source="/Assets/Arrow.png" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,30" Stretch="None"/>
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="ItemTemplate770x250">
+		<Grid HorizontalAlignment="Left" Width="770" Height="250">
+			<Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+				<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+			</Border>
+			<StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" 
+						   Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,10,15,0"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" 
+						   Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+			</StackPanel>
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="ItemTemplateTextOnly250x250">
+		<Grid HorizontalAlignment="Left" Width="250" Height="250">
+			<StackPanel VerticalAlignment="Top">
+				<TextBlock Text="{Binding Title}" Foreground="{StaticResource ApplicationForegroundThemeBrush}" 
+						   Style="{StaticResource ItemTemplateTextOnlyTitleTextStyle}" Margin="15,0,15,10"/>
+				<TextBlock Text="{Binding Subtitle}" Foreground="{StaticResource ApplicationForegroundThemeBrush}" 
+						   Style="{StaticResource ItemTemplateTextOnlyCaptionTextStyle}" TextWrapping="Wrap" Margin="15,0,15,10"/>
 			</StackPanel>
 		</Grid>
 	</DataTemplate>

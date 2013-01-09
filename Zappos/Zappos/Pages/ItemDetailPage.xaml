@@ -60,13 +60,15 @@
                             <!-- Content is allowed to flow across as many columns as needed -->
                             <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47">
                                 <RichTextBlock x:Name="richTextBlock" Width="560" Style="{StaticResource ItemRichTextStyle}" IsTextSelectionEnabled="False">
-                                    <Paragraph>
+                                    <Paragraph LineHeight="30">
                                         <Run FontSize="26.667" FontWeight="Light" Text="{Binding Title}"/>
-                                        <LineBreak/>
-                                        <LineBreak/>
-                                        <Run FontWeight="Normal" Text="{Binding Subtitle}"/>
                                     </Paragraph>
-                                    <Paragraph LineStackingStrategy="MaxHeight">
+									<Paragraph>
+										<LineBreak/>
+										<LineBreak/>
+										<Run FontWeight="Normal" Text="{Binding Subtitle}"/>
+									</Paragraph>
+									<Paragraph LineStackingStrategy="MaxHeight">
                                         <InlineUIContainer>
                                             <Image x:Name="image" MaxHeight="480" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}" AutomationProperties.Name="{Binding Title}"/>
                                         </InlineUIContainer>

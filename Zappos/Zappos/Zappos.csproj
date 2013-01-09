@@ -141,7 +141,13 @@
     <None Include="Zappos_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Arrow.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\PhotoChick1.jpg" />
+    <Content Include="Assets\PhotoChick2.jpg" />
+    <Content Include="Assets\PhotoChick3.jpg" />
+    <Content Include="Assets\PhotoChick4.jpg" />
+    <Content Include="Assets\PhotoDude.jpg" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
@@ -150,6 +156,7 @@
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\Temp1.png" />
     <Content Include="Assets\Temp2.png" />
+    <Content Include="Assets\ZapposHeaderLogo.png" />
     <Content Include="Assets\ZapposLogo.png" />
     <Content Include="Assets\ZapposSmallLogo.png" />
     <Content Include="Assets\ZapposSplashScreen.png" />

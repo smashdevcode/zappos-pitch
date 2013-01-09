@@ -14,6 +14,9 @@ namespace Zappos.Common
 		public DataTemplate ItemTemplateStandard { get; set; }
 		public DataTemplate ItemTemplateTall { get; set; }
 		public DataTemplate ItemTemplateWide { get; set; }
+		public DataTemplate ItemTemplateWideWithArrow { get; set; }
+		public DataTemplate ItemTemplateExtraWide { get; set; }
+		public DataTemplate ItemTemplateTextOnly { get; set; }
 
 		protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
 		{
@@ -32,6 +35,15 @@ namespace Zappos.Common
 					case PitchItemLayout.Wide:
 						SetColumnRowSpan(uiElement, 2, 1);
 						return ItemTemplateWide;
+					case PitchItemLayout.WideWithArrow:
+						SetColumnRowSpan(uiElement, 2, 1);
+						return ItemTemplateWideWithArrow;
+					case PitchItemLayout.ExtraWide:
+						SetColumnRowSpan(uiElement, 3, 1);
+						return ItemTemplateExtraWide;
+					case PitchItemLayout.TextOnly:
+						SetColumnRowSpan(uiElement, 1, 1);
+						return ItemTemplateTextOnly;
 					default:
 						throw new Exception("Unexpected PitchItemLayout enum value: " + pitchItem.Layout.ToString());
 				}

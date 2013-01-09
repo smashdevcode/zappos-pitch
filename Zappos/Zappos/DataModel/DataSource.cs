@@ -13,7 +13,10 @@ namespace Zappos.Data
 	{
 		Standard,
 		Tall,
-		Wide
+		Wide,
+		WideWithArrow,
+		ExtraWide,
+		TextOnly
 	}
 
 	public sealed class DataSource
@@ -47,134 +50,134 @@ namespace Zappos.Data
 				"Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat");
 
 			var group1 = new PitchItemGroup(1,
-					"Group One",
-					"Group Subtitle One",
-					"Assets/DarkGray.png",
+					"Windows Store Application",
+					null,
+					null,
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 			group1.Items.Add(new PitchItem(
 				1,
-				"Item One",
-				"Subtitle One",
+				"Let us put a smile on your face.",
+				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
+				"Assets/PhotoChick4.jpg",
 				itemContent,
-				PitchItemLayout.Wide,
+				PitchItemLayout.ExtraWide,
 				group1));
 			group1.Items.Add(new PitchItem(
 				2,
-				"Item Two",
-				"Subtitle Two",
+				"Why Use XAML/C#?",
+				"From all of the options available to develop Windows Store applications, why use XAML and C#?",
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp2.png",
+				null,
 				itemContent,
-				PitchItemLayout.Wide,
+				PitchItemLayout.TextOnly,
 				group1));
 			group1.Items.Add(new PitchItem(
 				3,
-				"Item Three",
-				"Subtitle Three",
+				"Learn about Microsoft's MAAP program.",
+				"Take full advantage of Microsoft's desire to build Windows Store applications for Windows 8; let them fund some of the development effort.",
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
+				null,
 				itemContent,
-				PitchItemLayout.Standard,
-				group1));
-			group1.Items.Add(new PitchItem(
-				4,
-				"Item Four",
-				"Subtitle Four",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group1));
-			group1.Items.Add(new PitchItem(
-				5,
-				"Item Five",
-				"Subtitle Five",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group1));
-			group1.Items.Add(new PitchItem(
-				6,
-				"Item Six",
-				"Subtitle Six",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp2.png",
-				itemContent,
-				PitchItemLayout.Standard,
+				PitchItemLayout.TextOnly,
 				group1));
 			this.AllGroups.Add(group1);
 
 			var group2 = new PitchItemGroup(1,
-					"Group Two",
-					"Group Subtitle Two",
-					"Assets/DarkGray.png",
+					"More Information",
+					null,
+					null,
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 			group2.Items.Add(new PitchItem(
+				4,
+				"Learn more about CSG Pro.",
+				null,
+				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				"Assets/PhotoChick3.jpg",
+				itemContent,
+				PitchItemLayout.Standard,
+				group2));
+			group2.Items.Add(new PitchItem(
+				5,
+				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
+				null,
+				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				"Assets/PhotoDude.jpg",
+				itemContent,
+				PitchItemLayout.WideWithArrow,
+				group2));
+			group2.Items.Add(new PitchItem(
+				6,
+				"Check out the timeline.",
+				null,
+				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				"Assets/PhotoChick1.jpg",
+				itemContent,
+				PitchItemLayout.Standard,
+				group2));
+			group2.Items.Add(new PitchItem(
 				7,
-				"Item Seven",
-				"Subtitle Seven",
+				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
+				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
+				"Assets/PhotoChick2.jpg",
 				itemContent,
-				PitchItemLayout.Standard,
+				PitchItemLayout.WideWithArrow,
 				group2));
-			group2.Items.Add(new PitchItem(
-				8,
-				"Item Eight",
-				"Subtitle Eight",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				9,
-				"Item Nine",
-				"Subtitle Nine",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				10,
-				"Item Ten",
-				"Subtitle Ten",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				11,
-				"Item Eleven",
-				"Subtitle Eleven",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				12,
-				"Item Twelve",
-				"Subtitle Twelve",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				13,
-				"Item Thirteen",
-				"Subtitle Thirteen",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/Temp1.png",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
+			//group2.Items.Add(new PitchItem(
+			//	8,
+			//	"Item Eight",
+			//	"Subtitle Eight",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
+			//group2.Items.Add(new PitchItem(
+			//	9,
+			//	"Item Nine",
+			//	"Subtitle Nine",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
+			//group2.Items.Add(new PitchItem(
+			//	10,
+			//	"Item Ten",
+			//	"Subtitle Ten",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
+			//group2.Items.Add(new PitchItem(
+			//	11,
+			//	"Item Eleven",
+			//	"Subtitle Eleven",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
+			//group2.Items.Add(new PitchItem(
+			//	12,
+			//	"Item Twelve",
+			//	"Subtitle Twelve",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
+			//group2.Items.Add(new PitchItem(
+			//	13,
+			//	"Item Thirteen",
+			//	"Subtitle Thirteen",
+			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+			//	"Assets/Temp1.png",
+			//	itemContent,
+			//	PitchItemLayout.Standard,
+			//	group2));
 			this.AllGroups.Add(group2);
 		}
 	}

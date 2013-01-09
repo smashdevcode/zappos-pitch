@@ -21,7 +21,10 @@
 		<common:PitchItemDataTemplateSelector  x:Key="SelectingDataTemplate"
 			ItemTemplateStandard="{StaticResource ItemTemplate250x250}"
 			ItemTemplateTall="{StaticResource ItemTemplate250x510}"
-			ItemTemplateWide="{StaticResource ItemTemplate510x250}"/>
+			ItemTemplateWide="{StaticResource ItemTemplate510x250}"
+			ItemTemplateWideWithArrow="{StaticResource ItemTemplateWithArrow510x250}"
+			ItemTemplateExtraWide="{StaticResource ItemTemplate770x250}"
+			ItemTemplateTextOnly="{StaticResource ItemTemplateTextOnly250x250}"/>
 	</Page.Resources>
 
     <!--
@@ -61,7 +64,7 @@
 					</GroupStyle.HeaderTemplate>
 					<GroupStyle.Panel>
 						<ItemsPanelTemplate>
-							<VariableSizedWrapGrid Orientation="Vertical" 
+							<VariableSizedWrapGrid Orientation="Horizontal" 
 								Margin="0,0,80,0" 
 								ItemHeight="260" 
 								ItemWidth="260"/>
@@ -108,7 +111,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+			<Image Source="{StaticResource ZapposHeaderLogo}" Grid.Column="1" 
+				AutomationProperties.Name="Zappos.com" Margin="-30,0,0,0" Stretch="None" HorizontalAlignment="Left"/>
+            <!--<TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>-->
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
