@@ -7,18 +7,13 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
 
-                <!-- 
-                    Styles that define common aspects of the platform look and feel
-                    Required by Visual Studio project and item templates
-                 -->
-                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Common/Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
 
-            <!-- Application-specific resources -->
+			<x:String x:Key="AppName">Zappos.com</x:String>
 
-            <x:String x:Key="AppName">Zappos</x:String>
-        </ResourceDictionary>
+		</ResourceDictionary>
     </Application.Resources>
 </Application>

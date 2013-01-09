@@ -28,7 +28,21 @@
 
     <x:String x:Key="ChevronGlyph">&#xE26B;</x:String>
 
-    <!-- RichTextBlock styles -->
+	<!-- System Wide Overrides -->
+	
+	<SolidColorBrush x:Key="ApplicationForegroundThemeBrush" Color="Red"/>
+	<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Green"/>
+	<SolidColorBrush x:Key="ApplicationPointerOverForegroundThemeBrush" Color="Purple"/>
+	<SolidColorBrush x:Key="ApplicationPressedForegroundThemeBrush" Color="Orange"/>
+	<SolidColorBrush x:Key="ButtonDisabledForegroundThemeBrush" Color="Gray"/>
+	<SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="Pink"/>
+	<SolidColorBrush x:Key="ListViewItemOverlayBackgroundThemeBrush" Color="Yellow"/>
+	<SolidColorBrush x:Key="ListViewItemBackgroundThemeBrush" Color="Green"/>
+	<SolidColorBrush x:Key="BackButtonForegroundThemeBrush" Color="Brown"/>
+	<SolidColorBrush x:Key="BackButtonPressedForegroundThemeBrush" Color="Indigo"/>
+	<SolidColorBrush x:Key="BackButtonPointerOverBackgroundThemeBrush" Color="Aqua"/>
+
+	<!-- RichTextBlock styles -->
 
     <Style x:Key="BasicRichTextStyle" TargetType="RichTextBlock">
         <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
@@ -1818,7 +1832,7 @@
 
     <Style x:Key="LayoutRootStyle" TargetType="Panel">
         <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
-        <Setter Property="ChildrenTransitions">
+		<Setter Property="ChildrenTransitions">
             <Setter.Value>
                 <TransitionCollection>
                     <EntranceThemeTransition/>
