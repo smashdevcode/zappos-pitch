@@ -39,8 +39,40 @@ namespace Zappos.Pages
 		/// session.  This will be null the first time a page is visited.</param>
 		protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
 		{
-			var items = DataSource.GetItems();
-			this.DefaultViewModel["Items"] = items;
+			var groups = DataSource.GetGroups();
+			this.DefaultViewModel["Groups"] = groups;
+		}
+
+		// JCTODO remove???
+		// make the headers not clickable???
+
+		/// <summary>
+		/// Invoked when a group header is clicked.
+		/// </summary>
+		/// <param name="sender">The Button used as a group header for the selected group.</param>
+		/// <param name="e">Event data that describes how the click was initiated.</param>
+		void Header_Click(object sender, RoutedEventArgs e)
+		{
+			//// Determine what group the Button instance represents
+			//var group = (sender as FrameworkElement).DataContext;
+
+			//// Navigate to the appropriate destination page, configuring the new page
+			//// by passing required information as a navigation parameter
+			//this.Frame.Navigate(typeof(GroupDetailPage), ((SampleDataGroup)group).UniqueId);
+		}
+
+		/// <summary>
+		/// Invoked when an item within a group is clicked.
+		/// </summary>
+		/// <param name="sender">The GridView (or ListView when the application is snapped)
+		/// displaying the item clicked.</param>
+		/// <param name="e">Event data that describes the item clicked.</param>
+		internal void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			// Navigate to the appropriate destination page, configuring the new page
+			// by passing required information as a navigation parameter
+			var itemId = ((PitchItem)e.ClickedItem).UniqueId;
+			this.Frame.Navigate(typeof(ItemDetailPage), itemId);
 		}
 	}
 }
