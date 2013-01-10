@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="0a4f7d9d-0cda-4161-9e15-2b1a8f0ebcdc" Publisher="CN=James" Version="1.0.0.0" />
+  <Identity Name="0a4f7d9d-0cda-4161-9e15-2b1a8f0ebcdc" Publisher="CN=James" Version="1.0.0.1" />
   <Properties>
     <DisplayName>Zappos</DisplayName>
     <PublisherDisplayName>James</PublisherDisplayName>
