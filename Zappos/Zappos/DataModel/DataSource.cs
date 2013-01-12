@@ -29,6 +29,12 @@ namespace Zappos.Data
 			get { return this._allGroups; }
 		}
 
+		private ObservableCollection<PitchItem> _allItems = new ObservableCollection<PitchItem>();
+		public ObservableCollection<PitchItem> AllItems
+		{
+			get { return this._allItems; }
+		}
+
 		public static ObservableCollection<PitchItemGroup> GetGroups()
 		{
 			return _dataSource.AllGroups;
@@ -39,7 +45,7 @@ namespace Zappos.Data
 		}
 		public static PitchItem GetItem(string uniqueId)
 		{
-			return _dataSource.AllGroups.SelectMany(group => group.Items).Where((item) => item.UniqueId == uniqueId).FirstOrDefault();
+			return _dataSource.AllItems.Where((item) => item.UniqueId == uniqueId).FirstOrDefault();
 		}
 
 		public DataSource()
@@ -65,23 +71,23 @@ namespace Zappos.Data
 				PitchItemLayout.ExtraWide,
 				group1);
 			group1.Items.Add(welcomeToCSGPro);
-			//this.Pages.Add(welcomeToCSGPro);
+			this.AllItems.Add(welcomeToCSGPro);
 
-			//var learnOurHistory = new PitchItem(
-			//	"LearnOurHistory",
-			//	"Learn Our History",
-			//	parentPage: welcomeToCSGPro);
-			//var whereWeWork = new PitchItem(
-			//	"WhereWeWork",
-			//	"Where We Work",
-			//	parentPage: welcomeToCSGPro);
-			//var meetOurManagement = new PitchItem(
-			//	"MeetOurManagement",
-			//	"Meet Our Management",
-			//	parentPage: welcomeToCSGPro);
-			//this.Pages.Add(learnOurHistory);
-			//this.Pages.Add(whereWeWork);
-			//this.Pages.Add(meetOurManagement);
+			var learnOurHistory = new PitchItem(
+				"LearnOurHistory",
+				"Learn Our History",
+				parentPitchItem: welcomeToCSGPro);
+			var whereWeWork = new PitchItem(
+				"WhereWeWork",
+				"Where We Work",
+				parentPitchItem: welcomeToCSGPro);
+			var meetOurManagement = new PitchItem(
+				"MeetOurManagement",
+				"Meet Our Management",
+				parentPitchItem: welcomeToCSGPro);
+			this.AllItems.Add(learnOurHistory);
+			this.AllItems.Add(whereWeWork);
+			this.AllItems.Add(meetOurManagement);
 
 			var welcome = new PitchItem(
 				"Welcome",
@@ -94,17 +100,18 @@ namespace Zappos.Data
 				PitchItemLayout.TextOnly,
 				group1);
 			group1.Items.Add(welcome);
-			//this.Pages.Add(welcome);
+			this.AllItems.Add(welcome);
 
 			this.AllGroups.Add(group1);
 
 			//More Information
 			//	About Our Approach
-			//		How We Work
+			//		Project Management
+			//		Testing
 			//		Why C#/XAML?
 			//	Connect
 			//	Project Details
-			//		Budget
+			//		Requirements
 			//		Timeline
 			//	Microsoft Application Acceleration Program (MAAP)
 
@@ -123,18 +130,23 @@ namespace Zappos.Data
 				PitchItemLayout.Standard,
 				group2);
 			group2.Items.Add(aboutOurApproach);
-			//this.Pages.Add(aboutOurApproach);
+			this.AllItems.Add(aboutOurApproach);
 
-			//var howWeWork = new PitchItem(
-			//	"HowWeWork",
-			//	"How We Work",
-			//	parentPage: aboutOurApproach);
-			//var whyCSharpXAML = new PitchItem(
-			//	"WhyCSharpXAML",
-			//	"Why C#/XAML?",
-			//	parentPage: aboutOurApproach);
-			//this.Pages.Add(howWeWork);
-			//this.Pages.Add(whyCSharpXAML);
+			var projectManagement = new PitchItem(
+				"ProjectManagement",
+				"Project Management",
+				parentPitchItem: aboutOurApproach);
+			var testing = new PitchItem(
+				"Testing",
+				"Testing",
+				parentPitchItem: aboutOurApproach);
+			var whyCSharpXAML = new PitchItem(
+				"WhyCSharpXAML",
+				"Why C#/XAML?",
+				parentPitchItem: aboutOurApproach);
+			this.AllItems.Add(projectManagement);
+			this.AllItems.Add(testing);
+			this.AllItems.Add(whyCSharpXAML);
 
 			var projectDetails = new PitchItem(
 				"ProjectDetails",
@@ -147,18 +159,18 @@ namespace Zappos.Data
 				PitchItemLayout.Standard,
 				group2);
 			group2.Items.Add(projectDetails);
-			//this.Pages.Add(projectDetails);
+			this.AllItems.Add(projectDetails);
 
-			//var budget = new PitchItem(
-			//	"Budget",
-			//	"Budget",
-			//	parentPage: projectDetails);
-			//var timeline = new PitchItem(
-			//	"Timeline",
-			//	"Timeline",
-			//	parentPage: projectDetails);
-			//this.Pages.Add(budget);
-			//this.Pages.Add(timeline);
+			var requirements = new PitchItem(
+				"Requirements",
+				"Requirements",
+				parentPitchItem: projectDetails);
+			var timeline = new PitchItem(
+				"Timeline",
+				"Timeline",
+				parentPitchItem: projectDetails);
+			this.AllItems.Add(requirements);
+			this.AllItems.Add(timeline);
 
 			var connect = new PitchItem(
 				"Connect",
@@ -171,7 +183,7 @@ namespace Zappos.Data
 				PitchItemLayout.WideWithArrow,
 				group2);
 			group2.Items.Add(connect);
-			//this.Pages.Add(connect);
+			this.AllItems.Add(connect);
 
 			var maap = new PitchItem(
 				"MAAP",
@@ -184,7 +196,7 @@ namespace Zappos.Data
 				PitchItemLayout.WideWithArrow,
 				group2);
 			group2.Items.Add(maap);
-			//this.Pages.Add(maap);
+			this.AllItems.Add(maap);
 
 			this.AllGroups.Add(group2);
 		}
@@ -267,8 +279,8 @@ namespace Zappos.Data
 
 	public class PitchItem : PitchItemCommon
 	{
-		public PitchItem(string uniqueId, string pageTitle, string title, string subtitle, string description, string imagePath, 
-			string content, PitchItemLayout layout, PitchItemGroup group, PitchItem parentPitchItem = null)
+		public PitchItem(string uniqueId, string pageTitle, string title = null, string subtitle = null, string description = null, string imagePath = null,
+			string content = null, PitchItemLayout layout = PitchItemLayout.Standard, PitchItemGroup group = null, PitchItem parentPitchItem = null)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
 			this._pageTitle = pageTitle;
