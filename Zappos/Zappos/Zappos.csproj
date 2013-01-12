@@ -148,6 +148,8 @@
     <Content Include="Assets\PhotoChick3.jpg" />
     <Content Include="Assets\PhotoChick4.jpg" />
     <Content Include="Assets\PhotoDude.jpg" />
+    <Content Include="Assets\PhotoGear.jpg" />
+    <Content Include="Assets\PhotoRunning.jpg" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />

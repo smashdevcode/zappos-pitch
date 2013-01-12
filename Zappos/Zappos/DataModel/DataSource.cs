@@ -44,88 +44,148 @@ namespace Zappos.Data
 
 		public DataSource()
 		{
-			// JCTODO load data from XML???
-
-			var itemContent = string.Format("Item Content: {0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}",
-				"Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat");
+			//Windows Store Application
+			//	Welcome to CSG Pro
+			//		Learn Our History
+			//		Where We Work
+			//		Meet Our Management
 
 			var group1 = new PitchItemGroup(
-					"WindowsStoreApplication",
-					"Windows Store Application",
-					null,
-					null,
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
-			group1.Items.Add(new PitchItem(
-				"Item1",
-				"Let us put a smile on your face.",
+				"WindowsStoreApplication",
+				"Windows Store Application");
+
+			var welcomeToCSGPro = new PitchItem(
+				"WelcomeToCSGPro",
+				"Welcome to CSG Pro",
+				"Let us put a smile on your face. Learn more about CSG Pro.",
 				null,
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				null,
 				"Assets/PhotoChick4.jpg",
-				itemContent,
+				null,
 				PitchItemLayout.ExtraWide,
-				group1));
-			group1.Items.Add(new PitchItem(
-				"Item2",
-				"Why Use XAML/C#?",
-				"From all of the options available to develop Windows Store applications, why use XAML and C#?",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				group1);
+			group1.Items.Add(welcomeToCSGPro);
+			//this.Pages.Add(welcomeToCSGPro);
+
+			//var learnOurHistory = new PitchItem(
+			//	"LearnOurHistory",
+			//	"Learn Our History",
+			//	parentPage: welcomeToCSGPro);
+			//var whereWeWork = new PitchItem(
+			//	"WhereWeWork",
+			//	"Where We Work",
+			//	parentPage: welcomeToCSGPro);
+			//var meetOurManagement = new PitchItem(
+			//	"MeetOurManagement",
+			//	"Meet Our Management",
+			//	parentPage: welcomeToCSGPro);
+			//this.Pages.Add(learnOurHistory);
+			//this.Pages.Add(whereWeWork);
+			//this.Pages.Add(meetOurManagement);
+
+			var welcome = new PitchItem(
+				"Welcome",
+				"Welcome",
+				"Welcome! We're glad you're here.",
 				null,
-				itemContent,
-				PitchItemLayout.TextOnly,
-				group1));
-			group1.Items.Add(new PitchItem(
-				"Item3",
-				"Learn about Microsoft's MAAP program.",
-				"Take full advantage of Microsoft's desire to build Windows Store applications for Windows 8; let them fund some of the development effort.",
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				"You may have already noticed, but we built you an app. We really like the idea of putting Zappos.com on the Windows App Store and wanted to show you that we're pretty excited about it.\n\nSo welcome. This application will guide you through the details of our overall approach and hopefully answer any questions you may have. Enjoy!",
 				null,
-				itemContent,
+				null,
 				PitchItemLayout.TextOnly,
-				group1));
+				group1);
+			group1.Items.Add(welcome);
+			//this.Pages.Add(welcome);
+
 			this.AllGroups.Add(group1);
 
+			//More Information
+			//	About Our Approach
+			//		How We Work
+			//		Why C#/XAML?
+			//	Connect
+			//	Project Details
+			//		Budget
+			//		Timeline
+			//	Microsoft Application Acceleration Program (MAAP)
+
 			var group2 = new PitchItemGroup(
-					"MoreInformation",
-					"More Information",
-					null,
-					null,
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
-			group2.Items.Add(new PitchItem(
-				"Item4",
-				"Learn more about CSG Pro.",
+				"MoreInformation",
+				"More Information");
+
+			var aboutOurApproach = new PitchItem(
+				"AboutOurApproach",
+				"About Our Approach",
+				"Learn about our approach. And the gear that we use.",
 				null,
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/PhotoChick3.jpg",
-				itemContent,
+				null,
+				"Assets/PhotoGear.jpg",
+				null,
 				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				"Item5",
-				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
+				group2);
+			group2.Items.Add(aboutOurApproach);
+			//this.Pages.Add(aboutOurApproach);
+
+			//var howWeWork = new PitchItem(
+			//	"HowWeWork",
+			//	"How We Work",
+			//	parentPage: aboutOurApproach);
+			//var whyCSharpXAML = new PitchItem(
+			//	"WhyCSharpXAML",
+			//	"Why C#/XAML?",
+			//	parentPage: aboutOurApproach);
+			//this.Pages.Add(howWeWork);
+			//this.Pages.Add(whyCSharpXAML);
+
+			var projectDetails = new PitchItem(
+				"ProjectDetails",
+				"Project Details",
+				"Running resolutions. Check out the project details.",
 				null,
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
+				null,
+				"Assets/PhotoRunning.jpg",
+				null,
+				PitchItemLayout.Standard,
+				group2);
+			group2.Items.Add(projectDetails);
+			//this.Pages.Add(projectDetails);
+
+			//var budget = new PitchItem(
+			//	"Budget",
+			//	"Budget",
+			//	parentPage: projectDetails);
+			//var timeline = new PitchItem(
+			//	"Timeline",
+			//	"Timeline",
+			//	parentPage: projectDetails);
+			//this.Pages.Add(budget);
+			//this.Pages.Add(timeline);
+
+			var connect = new PitchItem(
+				"Connect",
+				"Connect",
+				"We want to get to know you better. Connect with us!",
+				null,
+				null,
 				"Assets/PhotoDude.jpg",
-				itemContent,
+				null,
 				PitchItemLayout.WideWithArrow,
-				group2));
-			group2.Items.Add(new PitchItem(
-				"Item6",
-				"Check out the timeline.",
+				group2);
+			group2.Items.Add(connect);
+			//this.Pages.Add(connect);
+
+			var maap = new PitchItem(
+				"MAAP",
+				"Microsoft Application Acceleration Program (MAAP)",
+				"Learn about the Windows 8 Microsoft Application Acceleration Program (MAAP).",
 				null,
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-				"Assets/PhotoChick1.jpg",
-				itemContent,
-				PitchItemLayout.Standard,
-				group2));
-			group2.Items.Add(new PitchItem(
-				"Item7",
-				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
 				null,
-				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
 				"Assets/PhotoChick2.jpg",
-				itemContent,
+				null,
 				PitchItemLayout.WideWithArrow,
-				group2));
+				group2);
+			group2.Items.Add(maap);
+			//this.Pages.Add(maap);
+
 			this.AllGroups.Add(group2);
 		}
 	}
@@ -207,13 +267,22 @@ namespace Zappos.Data
 
 	public class PitchItem : PitchItemCommon
 	{
-		public PitchItem(string uniqueId, string title, string subtitle, string description, string imagePath, 
-			string content, PitchItemLayout layout, PitchItemGroup group)
+		public PitchItem(string uniqueId, string pageTitle, string title, string subtitle, string description, string imagePath, 
+			string content, PitchItemLayout layout, PitchItemGroup group, PitchItem parentPitchItem = null)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
+			this._pageTitle = pageTitle;
 			this._content = content;
 			this._layout = layout;
 			this._group = group;
+			this._parentPitchItem = parentPitchItem;
+		}
+
+		private string _pageTitle = string.Empty;
+		public string PageTitle
+		{
+			get { return this._pageTitle; }
+			set { this.SetProperty(ref this._pageTitle, value); }
 		}
 
 		private string _content = string.Empty;
@@ -237,6 +306,13 @@ namespace Zappos.Data
 			set { this.SetProperty(ref this._group, value); }
 		}
 
+		private PitchItem _parentPitchItem;
+		public PitchItem ParentPitchItem
+		{
+			get { return this._parentPitchItem; }
+			set { this.SetProperty(ref this._parentPitchItem, value); }
+		}
+
 		public override string ToString()
 		{
 			return this.Title;
@@ -245,7 +321,7 @@ namespace Zappos.Data
 
 	public class PitchItemGroup : PitchItemCommon
 	{
-		public PitchItemGroup(string uniqueId, string title, string subtitle, string description, string imagePath)
+		public PitchItemGroup(string uniqueId, string title, string subtitle = null, string description = null, string imagePath = null)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
 		}
