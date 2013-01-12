@@ -56,6 +56,7 @@ namespace Zappos.Pages
 			//this.flipView.SelectedItem = item;
 
 			var item = DataSource.GetItem((string)navigationParameter);
+			BreadcrumbMenu.CurrentItem = item;
 			var itemType = Type.GetType(string.Format("Zappos.UserControls.{0}", item.UniqueId));
 			if (itemType != null)
 			{
@@ -64,7 +65,7 @@ namespace Zappos.Pages
 				{
 					this.Frame.Navigate(navigateEventArgs.PageType, navigateEventArgs.Parameter);
 				};
-				Grid.SetRowSpan(itemInstance, 2);
+				Grid.SetRowSpan(itemInstance, 3);
 				MainGrid.Children.Insert(0, itemInstance);
 			}
 		}
@@ -81,6 +82,16 @@ namespace Zappos.Pages
 
 			//var selectedItem = (PitchItem)this.flipView.SelectedItem;
 			//pageState["SelectedItem"] = selectedItem.UniqueId;
+		}
+
+		/// <summary>
+		/// Handles the breadcrumb menu Navigate event.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void BreadcrumbMenu_Navigate_1(object sender, UserControlBase.NavigateEventArgs e)
+		{
+			this.Frame.Navigate(e.PageType, e.Parameter);
 		}
 	}
 }

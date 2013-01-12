@@ -7,6 +7,7 @@
     xmlns:local="using:Zappos.Pages"
     xmlns:data="using:Zappos.Data"
     xmlns:common="using:Zappos.Common"
+    xmlns:usercontrols="using:Zappos.UserControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,10 +15,11 @@
 	<Grid x:Name="MainGrid" Style="{StaticResource ZapposLayoutRootStyle}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="140"/>
+			<RowDefinition Height="50"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<!-- JCTODO load the control into the grid -->
+		<!-- NOTE Page content is dynamically loaded into this grid via the code behind -->
 		
 		<!-- Back button and page title -->
 		<Grid>
@@ -25,11 +27,14 @@
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" 
+					Style="{StaticResource BackButtonStyle}"/>
 			<Image Source="{StaticResource ZapposHeaderLogo}" Grid.Column="1" 
-				AutomationProperties.Name="Zappos.com" Margin="-30,0,0,0" Stretch="None" HorizontalAlignment="Left"/>
+				   AutomationProperties.Name="Zappos.com" Margin="-30,0,0,0" Stretch="None" HorizontalAlignment="Left"/>
 			<!--<TextBlock x:Name="pageTitle" Text="{Binding Group.Title}" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="1" IsHitTestVisible="false"/>-->
 		</Grid>
+
+		<usercontrols:BreadcrumbMenu x:Name="BreadcrumbMenu" Grid.Row="1" Margin="120,-20,0,0" Navigate="BreadcrumbMenu_Navigate_1"/>
 
 		<VisualStateManager.VisualStateGroups>
 

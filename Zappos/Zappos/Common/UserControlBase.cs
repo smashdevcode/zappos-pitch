@@ -45,6 +45,10 @@ namespace Zappos.Common
 		#endregion
 
 		#region Methods
+		public void NavigateToHomePage()
+		{
+			OnNavigate(typeof(Home), null);
+		}
 		public void NavigateToItemDetailPage(string itemId)
 		{
 			OnNavigate(typeof(ItemDetail), itemId);

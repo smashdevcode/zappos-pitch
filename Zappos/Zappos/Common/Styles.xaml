@@ -21,6 +21,12 @@
 	</Style>
 	
 	<BitmapImage x:Key="ZapposHeaderLogo" UriSource="/Assets/ZapposHeaderLogo.png"/>
+	<BitmapImage x:Key="BreadcrumbMenuArrowSmallDark" UriSource="/Assets/BreadcrumbMenuArrowSmallDark.png"/>
+	
+	<Style x:Key="BreadcrumbMenuStyle" TargetType="Button">
+		<Setter Property="FontSize" Value="18"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+	</Style>
 
 	<Style x:Key="TitleTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BaselineTextStyle}">
 		<Setter Property="FontWeight" Value="SemiBold"/>

@@ -136,6 +136,9 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="UserControls\BreadcrumbMenu.xaml.cs">
+      <DependentUpon>BreadcrumbMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ConnectLanding.xaml.cs">
       <DependentUpon>ConnectLanding.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Arrow.png" />
+    <Content Include="Assets\BreadcrumbMenuArrowDark.png" />
+    <Content Include="Assets\BreadcrumbMenuArrowLight.png" />
+    <Content Include="Assets\BreadcrumbMenuArrowSmallDark.png" />
+    <Content Include="Assets\BreadcrumbMenuArrowSmallLight.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\PhotoChick1.jpg" />
     <Content Include="Assets\PhotoChick2.jpg" />
@@ -218,6 +225,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ItemDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BreadcrumbMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
