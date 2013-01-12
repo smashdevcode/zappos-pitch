@@ -53,9 +53,9 @@ namespace Zappos.Data
 		{
 			//Windows Store Application
 			//	Welcome to CSG Pro
-			//		Learn Our History
-			//		Where We Work
 			//		Meet Our Management
+			//		Where We Work
+			//		Learn Our History
 
 			var group1 = new PitchItemGroup(
 				"WindowsStoreApplication",
@@ -74,21 +74,21 @@ namespace Zappos.Data
 			group1.Items.Add(welcomeToCSGPro);
 			this.AllItems.Add(welcomeToCSGPro);
 
-			var learnOurHistory = new PitchItem(
-				"LearnOurHistory",
-				"Learn Our History",
+			var meetTheTeam = new PitchItem(
+				"MeetTheTeam",
+				"Meet the Team",
 				parentPitchItem: welcomeToCSGPro);
 			var whereWeWork = new PitchItem(
 				"WhereWeWork",
 				"Where We Work",
 				parentPitchItem: welcomeToCSGPro);
-			var meetOurManagement = new PitchItem(
-				"MeetOurManagement",
-				"Meet Our Management",
+			var learnOurHistory = new PitchItem(
+				"LearnOurHistory",
+				"Learn Our History",
 				parentPitchItem: welcomeToCSGPro);
-			this.AllItems.Add(learnOurHistory);
+			this.AllItems.Add(meetTheTeam);
 			this.AllItems.Add(whereWeWork);
-			this.AllItems.Add(meetOurManagement);
+			this.AllItems.Add(learnOurHistory);
 
 			var welcome = new PitchItem(
 				"Welcome",
@@ -123,7 +123,7 @@ namespace Zappos.Data
 			var aboutOurApproach = new PitchItem(
 				"AboutOurApproach",
 				"About Our Approach",
-				"Learn about our approach. And the gear that we use.",
+				"The gear we use. About CSG's approach.",
 				null,
 				null,
 				"Assets/PhotoGear.jpg",
@@ -133,20 +133,20 @@ namespace Zappos.Data
 			group2.Items.Add(aboutOurApproach);
 			this.AllItems.Add(aboutOurApproach);
 
-			var projectManagement = new PitchItem(
-				"ProjectManagement",
-				"Project Management",
-				parentPitchItem: aboutOurApproach);
-			var testing = new PitchItem(
-				"Testing",
-				"Testing",
-				parentPitchItem: aboutOurApproach);
 			var whyCSharpXAML = new PitchItem(
 				"WhyCSharpXAML",
 				"Why C#/XAML?",
 				parentPitchItem: aboutOurApproach);
+			var projectManagement = new PitchItem(
+				"ProjectManagement",
+				"Project Management",
+				parentPitchItem: aboutOurApproach);
+			var testingMethods = new PitchItem(
+				"TestingMethods",
+				"Testing Methods",
+				parentPitchItem: aboutOurApproach);
 			this.AllItems.Add(projectManagement);
-			this.AllItems.Add(testing);
+			this.AllItems.Add(testingMethods);
 			this.AllItems.Add(whyCSharpXAML);
 
 			var projectDetails = new PitchItem(
@@ -162,16 +162,16 @@ namespace Zappos.Data
 			group2.Items.Add(projectDetails);
 			this.AllItems.Add(projectDetails);
 
-			var requirements = new PitchItem(
-				"Requirements",
-				"Requirements",
+			var projectTimeline = new PitchItem(
+				"ProjectTimeline",
+				"Project Timeline",
 				parentPitchItem: projectDetails);
-			var timeline = new PitchItem(
-				"Timeline",
-				"Timeline",
+			var technicalRequirements = new PitchItem(
+				"TechnicalRequirements",
+				"Technical Requirements",
 				parentPitchItem: projectDetails);
-			this.AllItems.Add(requirements);
-			this.AllItems.Add(timeline);
+			this.AllItems.Add(projectTimeline);
+			this.AllItems.Add(technicalRequirements);
 
 			var connect = new PitchItem(
 				"ConnectLanding",

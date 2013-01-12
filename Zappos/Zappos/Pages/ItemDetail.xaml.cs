@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Zappos.Common;
 using Zappos.Data;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -58,7 +59,11 @@ namespace Zappos.Pages
 			var itemType = Type.GetType(string.Format("Zappos.UserControls.{0}", item.UniqueId));
 			if (itemType != null)
 			{
-				var itemInstance = (UserControl)Activator.CreateInstance(itemType);
+				var itemInstance = (UserControlBase)Activator.CreateInstance(itemType);
+				itemInstance.Navigate += (navigateSender, navigateEventArgs) =>
+				{
+					this.Frame.Navigate(navigateEventArgs.PageType, navigateEventArgs.Parameter);
+				};
 				Grid.SetRowSpan(itemInstance, 2);
 				MainGrid.Children.Insert(0, itemInstance);
 			}

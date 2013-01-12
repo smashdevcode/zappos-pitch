@@ -1,5 +1,5 @@
 ﻿<common:UserControlBase
-    x:Class="Zappos.UserControls.ConnectLanding"
+    x:Class="Zappos.UserControls.MeetTheTeam"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Zappos.UserControls"
@@ -10,7 +10,7 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Green">
-		<TextBlock FontSize="80" Margin="50,200,0,0">We'd love to connect!</TextBlock>
+	<Grid Background="Gray">
+		<TextBlock FontSize="80" Margin="50,200,0,0">Meet the Team</TextBlock>
 	</Grid>
 </common:UserControlBase>

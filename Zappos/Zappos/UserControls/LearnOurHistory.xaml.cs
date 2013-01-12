@@ -15,9 +15,9 @@ using Zappos.Common;
 
 namespace Zappos.UserControls
 {
-	public sealed partial class ConnectLanding : UserControlBase
+	public sealed partial class LearnOurHistory : UserControlBase
 	{
-		public ConnectLanding()
+		public LearnOurHistory()
 		{
 			this.InitializeComponent();
 		}

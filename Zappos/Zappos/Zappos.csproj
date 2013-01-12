@@ -108,6 +108,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\PitchItemDataTemplateSelector.cs" />
+    <Compile Include="Common\UserControlBase.cs" />
     <Compile Include="DataModel\DataSource.cs" />
     <Compile Include="GroupedItemsPage.xaml.cs">
       <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
@@ -138,8 +139,17 @@
     <Compile Include="UserControls\ConnectLanding.xaml.cs">
       <DependentUpon>ConnectLanding.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\LearnOurHistory.xaml.cs">
+      <DependentUpon>LearnOurHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MeetTheTeam.xaml.cs">
+      <DependentUpon>MeetTheTeam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomeToCSGProLanding.xaml.cs">
       <DependentUpon>WelcomeToCSGProLanding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WhereWeWork.xaml.cs">
+      <DependentUpon>WhereWeWork.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -215,7 +225,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\LearnOurHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MeetTheTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\WelcomeToCSGProLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\WhereWeWork.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

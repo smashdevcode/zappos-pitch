@@ -11,16 +11,31 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
+using Zappos.Common;
+using Zappos.Pages;
 
 namespace Zappos.UserControls
 {
-	public sealed partial class WelcomeToCSGProLanding : UserControl
+	public sealed partial class WelcomeToCSGProLanding : UserControlBase
 	{
 		public WelcomeToCSGProLanding()
 		{
 			this.InitializeComponent();
+		}
+
+		private void MeetTheTeamButton_Click_1(object sender, RoutedEventArgs e)
+		{
+			NavigateToItemDetailPage("MeetTheTeam");
+		}
+
+		private void WhereWeWorkButton_Click_1(object sender, RoutedEventArgs e)
+		{
+			NavigateToItemDetailPage("WhereWeWork");
+		}
+
+		private void LearnOurHistory_Click_1(object sender, RoutedEventArgs e)
+		{
+			NavigateToItemDetailPage("LearnOurHistory");
 		}
 	}
 }
