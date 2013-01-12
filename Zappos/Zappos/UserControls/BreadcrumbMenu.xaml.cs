@@ -53,13 +53,38 @@ namespace Zappos.UserControls
 		#region Methods
 		private void BuildBreadcrumbMenu(PitchItem currentItem)
 		{
-			if (_buttonStyle == null)
-				_buttonStyle = (Style)App.Current.Resources["BreadcrumbMenuStyle"];
-			if (_breadcrumbArrow == null)
-				_breadcrumbArrow = (BitmapImage)App.Current.Resources["BreadcrumbMenuArrowSmallDark"];
-
 			if (currentItem != null)
 			{
+				// if null, get the button style and breadcrumb arrow image
+				if (_buttonStyle == null)
+				{
+					switch (currentItem.ColorScheme)
+					{
+						case Enums.PageColorScheme.Dark:
+							_buttonStyle = (Style)App.Current.Resources["BreadcrumbMenuStyleDark"];
+							break;
+						case Enums.PageColorScheme.Light:
+							_buttonStyle = (Style)App.Current.Resources["BreadcrumbMenuStyleLight"];
+							break;
+						default:
+							throw new Exception("Unexpected PageColorScheme enum value: " + currentItem.ColorScheme.ToString());
+					}
+				}
+				if (_breadcrumbArrow == null)
+				{
+					switch (currentItem.ColorScheme)
+					{
+						case Enums.PageColorScheme.Dark:
+							_breadcrumbArrow = (BitmapImage)App.Current.Resources["BreadcrumbMenuArrowSmallDark"];
+							break;
+						case Enums.PageColorScheme.Light:
+							_breadcrumbArrow = (BitmapImage)App.Current.Resources["BreadcrumbMenuArrowSmallLight"];
+							break;
+						default:
+							throw new Exception("Unexpected PageColorScheme enum value: " + currentItem.ColorScheme.ToString());
+					}
+				}
+
 				var pitchItem = currentItem;
 				var firstItem = true;
 				while (pitchItem != null)

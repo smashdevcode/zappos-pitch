@@ -110,6 +110,8 @@
     <Compile Include="Common\PitchItemDataTemplateSelector.cs" />
     <Compile Include="Common\UserControlBase.cs" />
     <Compile Include="DataModel\DataSource.cs" />
+    <Compile Include="Enums\HomeTileLayout.cs" />
+    <Compile Include="Enums\PageColorScheme.cs" />
     <Compile Include="GroupedItemsPage.xaml.cs">
       <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
     </Compile>

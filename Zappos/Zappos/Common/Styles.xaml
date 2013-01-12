@@ -22,8 +22,16 @@
 	
 	<BitmapImage x:Key="ZapposHeaderLogo" UriSource="/Assets/ZapposHeaderLogo.png"/>
 	<BitmapImage x:Key="BreadcrumbMenuArrowSmallDark" UriSource="/Assets/BreadcrumbMenuArrowSmallDark.png"/>
-	
-	<Style x:Key="BreadcrumbMenuStyle" TargetType="Button">
+	<BitmapImage x:Key="BreadcrumbMenuArrowSmallLight" UriSource="/Assets/BreadcrumbMenuArrowSmallLight.png"/>
+
+	<Style x:Key="BreadcrumbMenuStyleDark" TargetType="Button">
+		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="FontSize" Value="18"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+	</Style>
+
+	<Style x:Key="BreadcrumbMenuStyleLight" TargetType="Button">
+		<Setter Property="Foreground" Value="#333333"/>
 		<Setter Property="FontSize" Value="18"/>
 		<Setter Property="BorderBrush" Value="Transparent"/>
 	</Style>

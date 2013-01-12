@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Zappos.Data;
+using Zappos.Enums;
 
 namespace Zappos.Common
 {
@@ -27,31 +28,31 @@ namespace Zappos.Common
 			{
 				switch (pitchItem.Layout)
 				{
-					case PitchItemLayout.Standard:
+					case HomeTileLayout.Standard:
 						SetColumnRowSpan(uiElement, 1, 1);
 						return ItemTemplateStandard;
-					case PitchItemLayout.Tall:
+					case HomeTileLayout.Tall:
 						SetColumnRowSpan(uiElement, 1, 2);
 						return ItemTemplateTall;
-					case PitchItemLayout.Wide:
+					case HomeTileLayout.Wide:
 						SetColumnRowSpan(uiElement, 2, 1);
 						return ItemTemplateWide;
-					case PitchItemLayout.WideWithArrow:
+					case HomeTileLayout.WideWithArrow:
 						SetColumnRowSpan(uiElement, 2, 1);
 						return ItemTemplateWideWithArrow;
-					case PitchItemLayout.ExtraWide:
+					case HomeTileLayout.ExtraWide:
 						SetColumnRowSpan(uiElement, 3, 1);
 						return ItemTemplateExtraWide;
-					case PitchItemLayout.StandardTextOnly:
+					case HomeTileLayout.StandardTextOnly:
 						uiElement.IsHitTestVisible = false;
 						SetColumnRowSpan(uiElement, 1, 1);
 						return ItemTemplateStandardTextOnly;
-					case PitchItemLayout.ExtraWideTextOnly:
+					case HomeTileLayout.ExtraWideTextOnly:
 						uiElement.IsHitTestVisible = false;
 						SetColumnRowSpan(uiElement, 3, 1);
 						return ItemTemplateExtraWideTextOnly;
 					default:
-						throw new Exception("Unexpected PitchItemLayout enum value: " + pitchItem.Layout.ToString());
+						throw new Exception("Unexpected HomeTileLayout enum value: " + pitchItem.Layout.ToString());
 				}
 			}
 			return ItemTemplateStandard;

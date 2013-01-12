@@ -6,20 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using Zappos.Enums;
 
 namespace Zappos.Data
 {
-	public enum PitchItemLayout
-	{
-		Standard,
-		Tall,
-		Wide,
-		WideWithArrow,
-		ExtraWide,
-		StandardTextOnly,
-		ExtraWideTextOnly
-	}
-
 	public sealed class DataSource
 	{
 		private static DataSource _dataSource = new DataSource();
@@ -69,7 +59,8 @@ namespace Zappos.Data
 				null,
 				"Assets/PhotoChick4.jpg",
 				null,
-				PitchItemLayout.ExtraWide,
+				PageColorScheme.Dark,
+				HomeTileLayout.ExtraWide,
 				group1);
 			group1.Items.Add(welcomeToCSGPro);
 			this.AllItems.Add(welcomeToCSGPro);
@@ -81,6 +72,7 @@ namespace Zappos.Data
 			var whereWeWork = new PitchItem(
 				"WhereWeWork",
 				"Where We Work",
+				colorScheme: PageColorScheme.Dark,
 				parentPitchItem: welcomeToCSGPro);
 			var learnOurHistory = new PitchItem(
 				"LearnOurHistory",
@@ -98,7 +90,8 @@ namespace Zappos.Data
 				"We built you an app because we love the idea of putting Zappos.com on the Windows Store! What better way could we demonstrate our enthusiasm?\n\nThis application will guide you through the details of our overall approach and hopefully answer any questions you may have. We hope you enjoy the experience!",
 				null,
 				null,
-				PitchItemLayout.ExtraWideTextOnly,
+				PageColorScheme.Light,
+				HomeTileLayout.ExtraWideTextOnly,
 				group1);
 			group1.Items.Add(welcome);
 			this.AllItems.Add(welcome);
@@ -128,7 +121,8 @@ namespace Zappos.Data
 				null,
 				"Assets/PhotoGear.jpg",
 				null,
-				PitchItemLayout.Standard,
+				PageColorScheme.Dark,
+				HomeTileLayout.Standard,
 				group2);
 			group2.Items.Add(aboutOurApproach);
 			this.AllItems.Add(aboutOurApproach);
@@ -140,10 +134,12 @@ namespace Zappos.Data
 			var projectManagement = new PitchItem(
 				"ProjectManagement",
 				"Project Management",
+				colorScheme: PageColorScheme.Dark,
 				parentPitchItem: aboutOurApproach);
 			var testingMethods = new PitchItem(
 				"TestingMethods",
 				"Testing Methods",
+				colorScheme: PageColorScheme.Dark,
 				parentPitchItem: aboutOurApproach);
 			this.AllItems.Add(projectManagement);
 			this.AllItems.Add(testingMethods);
@@ -157,7 +153,8 @@ namespace Zappos.Data
 				null,
 				"Assets/PhotoRunning.jpg",
 				null,
-				PitchItemLayout.Standard,
+				PageColorScheme.Light,
+				HomeTileLayout.Standard,
 				group2);
 			group2.Items.Add(projectDetails);
 			this.AllItems.Add(projectDetails);
@@ -181,7 +178,8 @@ namespace Zappos.Data
 				null,
 				"Assets/PhotoDude.jpg",
 				null,
-				PitchItemLayout.WideWithArrow,
+				PageColorScheme.Dark,
+				HomeTileLayout.WideWithArrow,
 				group2);
 			group2.Items.Add(connect);
 			this.AllItems.Add(connect);
@@ -194,7 +192,8 @@ namespace Zappos.Data
 				null,
 				"Assets/PhotoChick2.jpg",
 				null,
-				PitchItemLayout.WideWithArrow,
+				PageColorScheme.Light,
+				HomeTileLayout.WideWithArrow,
 				group2);
 			group2.Items.Add(maap);
 			this.AllItems.Add(maap);
@@ -281,11 +280,13 @@ namespace Zappos.Data
 	public class PitchItem : PitchItemCommon
 	{
 		public PitchItem(string uniqueId, string pageTitle, string title = null, string subtitle = null, string description = null, string imagePath = null,
-			string content = null, PitchItemLayout layout = PitchItemLayout.Standard, PitchItemGroup group = null, PitchItem parentPitchItem = null)
+			string content = null, PageColorScheme colorScheme = PageColorScheme.Light, HomeTileLayout layout = HomeTileLayout.Standard, 
+			PitchItemGroup group = null, PitchItem parentPitchItem = null)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
 			this._pageTitle = pageTitle;
 			this._content = content;
+			this._colorScheme = colorScheme;
 			this._layout = layout;
 			this._group = group;
 			this._parentPitchItem = parentPitchItem;
@@ -305,8 +306,15 @@ namespace Zappos.Data
 			set { this.SetProperty(ref this._content, value); }
 		}
 
-		private PitchItemLayout _layout = PitchItemLayout.Standard;
-		public PitchItemLayout Layout
+		private PageColorScheme _colorScheme = PageColorScheme.Light;
+		public PageColorScheme ColorScheme
+		{
+			get { return this._colorScheme; }
+			set { this.SetProperty(ref this._colorScheme, value); }
+		}
+
+		private HomeTileLayout _layout = HomeTileLayout.Standard;
+		public HomeTileLayout Layout
 		{
 			get { return this._layout; }
 			set { this.SetProperty(ref this._layout, value); }
