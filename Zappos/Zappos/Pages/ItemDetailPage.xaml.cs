@@ -48,7 +48,7 @@ namespace Zappos.Pages
 			// TODO: Assign a bindable group to this.DefaultViewModel["Group"]
 			// TODO: Assign a collection of bindable items to this.DefaultViewModel["Items"]
 			// TODO: Assign the selected item to this.flipView.SelectedItem
-			var item = DataSource.GetItem((int)navigationParameter);
+			var item = DataSource.GetItem((string)navigationParameter);
 			this.DefaultViewModel["Group"] = item.Group;
 			this.DefaultViewModel["Items"] = item.Group.Items;
 			this.flipView.SelectedItem = item;

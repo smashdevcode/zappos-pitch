@@ -33,11 +33,11 @@ namespace Zappos.Data
 		{
 			return _dataSource.AllGroups;
 		}
-		public static PitchItemGroup GetGroup(int uniqueId)
+		public static PitchItemGroup GetGroup(string uniqueId)
 		{
 			return _dataSource.AllGroups.Where((group) => group.UniqueId == uniqueId).FirstOrDefault();
 		}
-		public static PitchItem GetItem(int uniqueId)
+		public static PitchItem GetItem(string uniqueId)
 		{
 			return _dataSource.AllGroups.SelectMany(group => group.Items).Where((item) => item.UniqueId == uniqueId).FirstOrDefault();
 		}
@@ -49,13 +49,14 @@ namespace Zappos.Data
 			var itemContent = string.Format("Item Content: {0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}",
 				"Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat");
 
-			var group1 = new PitchItemGroup(1,
+			var group1 = new PitchItemGroup(
+					"WindowsStoreApplication",
 					"Windows Store Application",
 					null,
 					null,
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 			group1.Items.Add(new PitchItem(
-				1,
+				"Item1",
 				"Let us put a smile on your face.",
 				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -64,7 +65,7 @@ namespace Zappos.Data
 				PitchItemLayout.ExtraWide,
 				group1));
 			group1.Items.Add(new PitchItem(
-				2,
+				"Item2",
 				"Why Use XAML/C#?",
 				"From all of the options available to develop Windows Store applications, why use XAML and C#?",
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -73,7 +74,7 @@ namespace Zappos.Data
 				PitchItemLayout.TextOnly,
 				group1));
 			group1.Items.Add(new PitchItem(
-				3,
+				"Item3",
 				"Learn about Microsoft's MAAP program.",
 				"Take full advantage of Microsoft's desire to build Windows Store applications for Windows 8; let them fund some of the development effort.",
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -83,13 +84,14 @@ namespace Zappos.Data
 				group1));
 			this.AllGroups.Add(group1);
 
-			var group2 = new PitchItemGroup(1,
+			var group2 = new PitchItemGroup(
+					"MoreInformation",
 					"More Information",
 					null,
 					null,
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 			group2.Items.Add(new PitchItem(
-				4,
+				"Item4",
 				"Learn more about CSG Pro.",
 				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -98,7 +100,7 @@ namespace Zappos.Data
 				PitchItemLayout.Standard,
 				group2));
 			group2.Items.Add(new PitchItem(
-				5,
+				"Item5",
 				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
 				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -107,7 +109,7 @@ namespace Zappos.Data
 				PitchItemLayout.WideWithArrow,
 				group2));
 			group2.Items.Add(new PitchItem(
-				6,
+				"Item6",
 				"Check out the timeline.",
 				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -116,7 +118,7 @@ namespace Zappos.Data
 				PitchItemLayout.Standard,
 				group2));
 			group2.Items.Add(new PitchItem(
-				7,
+				"Item7",
 				"Find the shopping app that fits your style. Zappos on iOS, Android and Windows 8.",
 				null,
 				"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
@@ -124,60 +126,6 @@ namespace Zappos.Data
 				itemContent,
 				PitchItemLayout.WideWithArrow,
 				group2));
-			//group2.Items.Add(new PitchItem(
-			//	8,
-			//	"Item Eight",
-			//	"Subtitle Eight",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
-			//group2.Items.Add(new PitchItem(
-			//	9,
-			//	"Item Nine",
-			//	"Subtitle Nine",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
-			//group2.Items.Add(new PitchItem(
-			//	10,
-			//	"Item Ten",
-			//	"Subtitle Ten",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
-			//group2.Items.Add(new PitchItem(
-			//	11,
-			//	"Item Eleven",
-			//	"Subtitle Eleven",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
-			//group2.Items.Add(new PitchItem(
-			//	12,
-			//	"Item Twelve",
-			//	"Subtitle Twelve",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
-			//group2.Items.Add(new PitchItem(
-			//	13,
-			//	"Item Thirteen",
-			//	"Subtitle Thirteen",
-			//	"Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
-			//	"Assets/Temp1.png",
-			//	itemContent,
-			//	PitchItemLayout.Standard,
-			//	group2));
 			this.AllGroups.Add(group2);
 		}
 	}
@@ -187,7 +135,7 @@ namespace Zappos.Data
 	{
 		private static Uri _baseUri = new Uri("ms-appx:///");
 
-		public PitchItemCommon(int uniqueId, string title, string subtitle, string description, string imagePath)
+		public PitchItemCommon(string uniqueId, string title, string subtitle, string description, string imagePath)
 		{
 			this._uniqueId = uniqueId;
 			this._title = title;
@@ -196,8 +144,8 @@ namespace Zappos.Data
 			this._imagePath = imagePath;
 		}
 
-		private int _uniqueId = -1;
-		public int UniqueId
+		private string _uniqueId = string.Empty;
+		public string UniqueId
 		{
 			get { return this._uniqueId; }
 			set { this.SetProperty(ref this._uniqueId, value); }
@@ -259,7 +207,7 @@ namespace Zappos.Data
 
 	public class PitchItem : PitchItemCommon
 	{
-		public PitchItem(int uniqueId, string title, string subtitle, string description, string imagePath, 
+		public PitchItem(string uniqueId, string title, string subtitle, string description, string imagePath, 
 			string content, PitchItemLayout layout, PitchItemGroup group)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
@@ -297,7 +245,7 @@ namespace Zappos.Data
 
 	public class PitchItemGroup : PitchItemCommon
 	{
-		public PitchItemGroup(int uniqueId, string title, string subtitle, string description, string imagePath)
+		public PitchItemGroup(string uniqueId, string title, string subtitle, string description, string imagePath)
 			: base(uniqueId, title, subtitle, description, imagePath)
 		{
 		}
