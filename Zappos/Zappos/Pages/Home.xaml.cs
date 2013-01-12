@@ -54,7 +54,7 @@ namespace Zappos.Pages
 			// Navigate to the appropriate destination page, configuring the new page
 			// by passing required information as a navigation parameter
 			var itemId = ((PitchItem)e.ClickedItem).UniqueId;
-			this.Frame.Navigate(typeof(ItemDetailPage), itemId);
+			this.Frame.Navigate(typeof(ItemDetail), itemId);
 		}
 	}
 }

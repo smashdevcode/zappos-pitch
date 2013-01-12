@@ -16,7 +16,8 @@ namespace Zappos.Data
 		Wide,
 		WideWithArrow,
 		ExtraWide,
-		TextOnly
+		StandardTextOnly,
+		ExtraWideTextOnly
 	}
 
 	public sealed class DataSource
@@ -61,7 +62,7 @@ namespace Zappos.Data
 				"Windows Store Application");
 
 			var welcomeToCSGPro = new PitchItem(
-				"WelcomeToCSGPro",
+				"WelcomeToCSGProLanding",
 				"Welcome to CSG Pro",
 				"Let us put a smile on your face. Learn more about CSG Pro.",
 				null,
@@ -94,10 +95,10 @@ namespace Zappos.Data
 				"Welcome",
 				"Welcome! We're glad you're here.",
 				null,
-				"You may have already noticed, but we built you an app. We really like the idea of putting Zappos.com on the Windows App Store and wanted to show you that we're pretty excited about it.\n\nSo welcome. This application will guide you through the details of our overall approach and hopefully answer any questions you may have. Enjoy!",
+				"We built you an app because we love the idea of putting Zappos.com on the Windows Store! What better way could we demonstrate our enthusiasm?\n\nThis application will guide you through the details of our overall approach and hopefully answer any questions you may have. We hope you enjoy the experience!",
 				null,
 				null,
-				PitchItemLayout.TextOnly,
+				PitchItemLayout.ExtraWideTextOnly,
 				group1);
 			group1.Items.Add(welcome);
 			this.AllItems.Add(welcome);
@@ -173,7 +174,7 @@ namespace Zappos.Data
 			this.AllItems.Add(timeline);
 
 			var connect = new PitchItem(
-				"Connect",
+				"ConnectLanding",
 				"Connect",
 				"We want to get to know you better. Connect with us!",
 				null,

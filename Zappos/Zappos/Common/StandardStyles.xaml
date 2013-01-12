@@ -30,7 +30,7 @@
 	
 	<!-- Color Palette 
 
-	dark blue: #2C5987
+	dark blue: #4F81BD
 	logo light blue: #7499C6
 	light blue: #558ABE
 	baby blue: #37BCEC
@@ -44,7 +44,7 @@
 	<!-- System Wide Overrides -->
 
 	<SolidColorBrush x:Key="ApplicationForegroundThemeBrush" Color="#333333"/>
-	<SolidColorBrush x:Key="ApplicationSecondaryForegroundThemeBrush" Color="#2C5987"/>
+	<SolidColorBrush x:Key="ApplicationSecondaryForegroundThemeBrush" Color="#4F81BD"/>
 	<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#F8F8EE"/>
 	<SolidColorBrush x:Key="ApplicationPointerOverForegroundThemeBrush" Color="#558ABE"/>
 	<SolidColorBrush x:Key="ApplicationPressedForegroundThemeBrush" Color="#2C5987"/>

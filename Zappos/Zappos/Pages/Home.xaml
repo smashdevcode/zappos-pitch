@@ -24,7 +24,8 @@
 			ItemTemplateWide="{StaticResource ItemTemplate510x250}"
 			ItemTemplateWideWithArrow="{StaticResource ItemTemplateWithArrow510x250}"
 			ItemTemplateExtraWide="{StaticResource ItemTemplate770x250}"
-			ItemTemplateTextOnly="{StaticResource ItemTemplateTextOnly250x250}"/>
+			ItemTemplateStandardTextOnly="{StaticResource ItemTemplateTextOnly250x250}"
+			ItemTemplateExtraWideTextOnly="{StaticResource ItemTemplateTextOnly770x250}"/>
 	</Page.Resources>
 
     <!--
@@ -58,7 +59,7 @@
 						<DataTemplate>
 							<Grid Margin="1,0,0,6">
 								<TextBlock AutomationProperties.Name="Group Title" 
-									Text="{Binding Title}" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}"/>
+									Text="{Binding Title}" Margin="15,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}"/>
 							</Grid>
 						</DataTemplate>
 					</GroupStyle.HeaderTemplate>
