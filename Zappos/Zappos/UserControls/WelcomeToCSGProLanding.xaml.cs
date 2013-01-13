@@ -33,7 +33,7 @@ namespace Zappos.UserControls
 			NavigateToItemDetailPage("WhereWeWork");
 		}
 
-		private void LearnOurHistory_Click_1(object sender, RoutedEventArgs e)
+		private void LearnOurHistoryButton_Click_1(object sender, RoutedEventArgs e)
 		{
 			NavigateToItemDetailPage("LearnOurHistory");
 		}

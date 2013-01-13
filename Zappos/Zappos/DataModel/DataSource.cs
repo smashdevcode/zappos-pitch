@@ -113,9 +113,9 @@ namespace Zappos.Data
 				"MoreInformation",
 				"More Information");
 
-			var aboutOurApproach = new PitchItem(
-				"AboutOurApproach",
-				"About Our Approach",
+			var aboutCSGsApproach = new PitchItem(
+				"AboutCSGsApproachLanding",
+				"About CSG's Approach",
 				"The gear we use. About CSG's approach.",
 				null,
 				null,
@@ -124,29 +124,29 @@ namespace Zappos.Data
 				PageColorScheme.Dark,
 				HomeTileLayout.Standard,
 				group2);
-			group2.Items.Add(aboutOurApproach);
-			this.AllItems.Add(aboutOurApproach);
+			group2.Items.Add(aboutCSGsApproach);
+			this.AllItems.Add(aboutCSGsApproach);
 
 			var whyCSharpXAML = new PitchItem(
 				"WhyCSharpXAML",
 				"Why C#/XAML?",
-				parentPitchItem: aboutOurApproach);
+				parentPitchItem: aboutCSGsApproach);
 			var projectManagement = new PitchItem(
 				"ProjectManagement",
 				"Project Management",
 				colorScheme: PageColorScheme.Dark,
-				parentPitchItem: aboutOurApproach);
+				parentPitchItem: aboutCSGsApproach);
 			var testingMethods = new PitchItem(
 				"TestingMethods",
 				"Testing Methods",
 				colorScheme: PageColorScheme.Dark,
-				parentPitchItem: aboutOurApproach);
+				parentPitchItem: aboutCSGsApproach);
 			this.AllItems.Add(projectManagement);
 			this.AllItems.Add(testingMethods);
 			this.AllItems.Add(whyCSharpXAML);
 
 			var projectDetails = new PitchItem(
-				"ProjectDetails",
+				"ProjectDetailsLanding",
 				"Project Details",
 				"Running resolutions. Check out the project details.",
 				null,
@@ -185,7 +185,7 @@ namespace Zappos.Data
 			this.AllItems.Add(connect);
 
 			var maap = new PitchItem(
-				"MAAP",
+				"MicrosoftApplicationAccelerationProgram",
 				"Microsoft Application Acceleration Program (MAAP)",
 				"Learn about the Windows 8 Microsoft Application Acceleration Program (MAAP).",
 				null,

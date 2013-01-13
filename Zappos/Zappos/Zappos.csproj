@@ -138,6 +138,9 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="UserControls\AboutCSGsApproachLanding.xaml.cs">
+      <DependentUpon>AboutCSGsApproachLanding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BreadcrumbMenu.xaml.cs">
       <DependentUpon>BreadcrumbMenu.xaml</DependentUpon>
     </Compile>
@@ -150,11 +153,32 @@
     <Compile Include="UserControls\MeetTheTeam.xaml.cs">
       <DependentUpon>MeetTheTeam.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MicrosoftApplicationAccelerationProgram.xaml.cs">
+      <DependentUpon>MicrosoftApplicationAccelerationProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectDetailsLanding.xaml.cs">
+      <DependentUpon>ProjectDetailsLanding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectManagement.xaml.cs">
+      <DependentUpon>ProjectManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProjectTimeline.xaml.cs">
+      <DependentUpon>ProjectTimeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TechnicalRequirements.xaml.cs">
+      <DependentUpon>TechnicalRequirements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TestingMethods.xaml.cs">
+      <DependentUpon>TestingMethods.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomeToCSGProLanding.xaml.cs">
       <DependentUpon>WelcomeToCSGProLanding.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\WhereWeWork.xaml.cs">
       <DependentUpon>WhereWeWork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WhyCSharpXAML.xaml.cs">
+      <DependentUpon>WhyCSharpXAML.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +254,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\AboutCSGsApproachLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\BreadcrumbMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -246,11 +274,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\MicrosoftApplicationAccelerationProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectDetailsLanding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProjectTimeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TechnicalRequirements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TestingMethods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\WelcomeToCSGProLanding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\WhereWeWork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\WhyCSharpXAML.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

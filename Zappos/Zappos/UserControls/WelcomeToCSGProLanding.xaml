@@ -47,8 +47,8 @@
 					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
 				</StackPanel>
 			</Button>
-			<Button x:Name="LearnOurHistory" Style="{StaticResource LandingPageButtonStyle}" 
-					Click="LearnOurHistory_Click_1" Grid.Column="3">
+			<Button x:Name="LearnOurHistoryButton" Style="{StaticResource LandingPageButtonStyle}" 
+					Click="LearnOurHistoryButton_Click_1" Grid.Column="3">
 				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
 					<TextBlock Text="Learn our history" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
 					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>

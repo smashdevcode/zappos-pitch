@@ -49,11 +49,12 @@
 		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontWeight" Value="Light"/>
 		<Setter Property="TextWrapping" Value="NoWrap"/>
+		<Setter Property="Margin" Value="0,0,0,20"/>
 	</Style>
 	
 	<Style x:Key="LandingPageButtonContainerStyle" TargetType="Grid">
 		<Setter Property="VerticalAlignment" Value="Top"/>
-		<Setter Property="Margin" Value="0,40,0,0"/>
+		<Setter Property="Margin" Value="0,60,0,0"/>
 	</Style>
 
 	<Style x:Key="LandingPageButtonStyle" TargetType="Button">
@@ -72,7 +73,7 @@
 	</Style>
 
 	<Style x:Key="LandingPageButtonImageStyle" TargetType="Image">
-		<Setter Property="Margin" Value="5,2,0,0"/>
+		<Setter Property="Margin" Value="8,2,0,0"/>
 		<Setter Property="Stretch" Value="None"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Source" Value="/Assets/Arrow.png"/>

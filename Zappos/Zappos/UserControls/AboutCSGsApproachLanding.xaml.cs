@@ -15,26 +15,26 @@ using Zappos.Common;
 
 namespace Zappos.UserControls
 {
-	public sealed partial class ConnectLanding : UserControlBase
+	public sealed partial class AboutCSGsApproachLanding : UserControlBase
 	{
-		public ConnectLanding()
+		public AboutCSGsApproachLanding()
 		{
 			this.InitializeComponent();
 		}
 
-		private void TwitterButton_Click_1(object sender, RoutedEventArgs e)
+		private void WhyCSharpXAMLButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			NavigateToItemDetailPage("WhyCSharpXAML");
 		}
 
-		private void LinkedInButton_Click_1(object sender, RoutedEventArgs e)
+		private void ProjectManagementButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			NavigateToItemDetailPage("ProjectManagement");
 		}
 
-		private void OurWebsiteButton_Click_1(object sender, RoutedEventArgs e)
+		private void TestingMethodsButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			NavigateToItemDetailPage("TestingMethods");
 		}
 	}
 }

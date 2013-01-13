@@ -15,26 +15,11 @@ using Zappos.Common;
 
 namespace Zappos.UserControls
 {
-	public sealed partial class ConnectLanding : UserControlBase
+	public sealed partial class ProjectDetailsLanding : UserControlBase
 	{
-		public ConnectLanding()
+		public ProjectDetailsLanding()
 		{
 			this.InitializeComponent();
-		}
-
-		private void TwitterButton_Click_1(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void LinkedInButton_Click_1(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void OurWebsiteButton_Click_1(object sender, RoutedEventArgs e)
-		{
-
 		}
 	}
 }
