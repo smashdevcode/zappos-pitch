@@ -22,7 +22,7 @@
 			<ColumnDefinition Width="10*"/>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
-		<TextBlock Text="Testing Methods" Style="{StaticResource DetailPageTitleStyleLight}" 
+		<TextBlock Text="CSG's Testing Methods" Style="{StaticResource DetailPageTitleStyleLight}" 
 				   Grid.Row="1" Grid.Column="1"/>
 		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,0,0" Grid.Row="2" Grid.Column="1">
 			<Paragraph Margin="0,0,0,10">

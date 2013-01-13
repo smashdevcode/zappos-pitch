@@ -21,5 +21,10 @@ namespace Zappos.UserControls
 		{
 			this.InitializeComponent();
 		}
+
+		private void PortlandiaVideoLink_Tapped_1(object sender, TappedRoutedEventArgs e)
+		{
+			NavigateToItemDetailPage("PortlandiaVideo");
+		}
 	}
 }

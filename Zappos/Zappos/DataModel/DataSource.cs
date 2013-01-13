@@ -78,9 +78,15 @@ namespace Zappos.Data
 				"LearnOurHistory",
 				"Learn Our History",
 				parentPitchItem: welcomeToCSGPro);
+			var portlandiaVideo = new PitchItem(
+				"PortlandiaVideo",
+				"Portlandia Video",
+				colorScheme: PageColorScheme.Dark,
+				parentPitchItem: welcomeToCSGPro);
 			this.AllItems.Add(meetTheTeam);
 			this.AllItems.Add(whereWeWork);
 			this.AllItems.Add(learnOurHistory);
+			this.AllItems.Add(portlandiaVideo);
 
 			var welcome = new PitchItem(
 				"Welcome",

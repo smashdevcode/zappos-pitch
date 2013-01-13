@@ -10,7 +10,36 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Learn Our History</TextBlock>
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="The History of CSG" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" FontSize="22" LineHeight="24"
+					   Grid.Row="2" Grid.Column="1">
+			<Paragraph Margin="0,0,0,10">
+				CSG Pro is a custom software solution provider dedicated to designing and building software that transforms 
+				how people work. For twenty years our focus has remained consistent. We apply leading-edge technologies 
+				and expertise to create innovative business solutions for our clients. Our clients love us for it.
+			</Paragraph>
+			<Paragraph>
+				Our competence and commitment to excellence distinguishes us in the Microsoft partner community. CSG is one 
+				of a small number of Managed Gold Certified Partners in Oregon with whom Microsoft chooses to work as a "go-to" 
+				partner. Why? We deliver on our commitments.
+			</Paragraph>
+		</RichTextBlock>
+		<Image Source="/Assets/CSGLogo.png" Stretch="None" VerticalAlignment="Center" HorizontalAlignment="Center"
+			   Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>		
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
 	</Grid>
 </common:UserControlBase>

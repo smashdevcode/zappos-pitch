@@ -1,0 +1,17 @@
+﻿<common:UserControlBase
+    x:Class="Zappos.UserControls.PortlandiaVideo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Zappos.UserControls"
+    xmlns:common="using:Zappos.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="768"
+    d:DesignWidth="1366">
+
+	<Grid Background="#000000">
+		<MediaElement Source="/Assets/PortlandiaVideo.mp4" AutoPlay="True" Width="1366" Height="768" 
+					  MediaEnded="MediaElement_MediaEnded_1"/>
+    </Grid>
+</common:UserControlBase>

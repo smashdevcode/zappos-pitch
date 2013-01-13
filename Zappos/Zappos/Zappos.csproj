@@ -143,6 +143,9 @@
     <Compile Include="UserControls\MicrosoftApplicationAccelerationProgram.xaml.cs">
       <DependentUpon>MicrosoftApplicationAccelerationProgram.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PortlandiaVideo.xaml.cs">
+      <DependentUpon>PortlandiaVideo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ProjectDetailsLanding.xaml.cs">
       <DependentUpon>ProjectDetailsLanding.xaml</DependentUpon>
     </Compile>
@@ -173,6 +176,9 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="Assets\ArrowLight.png" />
+    <Content Include="Assets\CSGLogo.png" />
+    <Content Include="Assets\PortlandBike.png" />
+    <Content Include="Assets\PortlandiaVideo.mp4" />
     <Content Include="Assets\Windows 8 MAAP Customer.pdf" />
     <None Include="Common\ReadMe.txt" />
     <None Include="Zappos_TemporaryKey.pfx" />
@@ -246,6 +252,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\MicrosoftApplicationAccelerationProgram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PortlandiaVideo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
