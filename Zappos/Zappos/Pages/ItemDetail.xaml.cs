@@ -23,6 +23,8 @@ namespace Zappos.Pages
 	/// </summary>
 	public sealed partial class ItemDetail : Zappos.Common.LayoutAwarePage
 	{
+		private string _selectedItem = null;
+
 		public ItemDetail()
 		{
 			this.InitializeComponent();
@@ -39,24 +41,35 @@ namespace Zappos.Pages
 		/// session.  This will be null the first time a page is visited.</param>
 		protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
 		{
-			// JCTODO
+			// Allow saved page state to override the initial item to display
+			if (pageState != null && pageState.ContainsKey("SelectedItem"))
+			{
+				navigationParameter = pageState["SelectedItem"];
+			}
 
-			//// Allow saved page state to override the initial item to display
-			//if (pageState != null && pageState.ContainsKey("SelectedItem"))
-			//{
-			//	navigationParameter = pageState["SelectedItem"];
-			//}
-
-			//// TODO: Assign a bindable group to this.DefaultViewModel["Group"]
-			//// TODO: Assign a collection of bindable items to this.DefaultViewModel["Items"]
-			//// TODO: Assign the selected item to this.flipView.SelectedItem
-			//var item = DataSource.GetItem((string)navigationParameter);
-			//this.DefaultViewModel["Group"] = item.Group;
-			//this.DefaultViewModel["Items"] = item.Group.Items;
-			//this.flipView.SelectedItem = item;
-
+			// get the item
 			var item = DataSource.GetItem((string)navigationParameter);
+
+			// store the item id (used to save state when necessary)
+			_selectedItem = item.UniqueId;
+
+			// determine the back button style
+			switch (item.ColorScheme)
+			{
+				case Enums.PageColorScheme.Dark:
+					backButton.Style = (Style)App.Current.Resources["BackButtonStyleDark"];
+					break;
+				case Enums.PageColorScheme.Light:
+					backButton.Style = (Style)App.Current.Resources["BackButtonStyleLight"];
+					break;
+				default:
+					throw new Exception("Unexpected PageColorScheme enum value: " + item.ColorScheme.ToString());
+			}
+
+			// set the breadcrumb current item
 			BreadcrumbMenu.CurrentItem = item;
+	
+			// attempt to load the associated user control
 			var itemType = Type.GetType(string.Format("Zappos.UserControls.{0}", item.UniqueId));
 			if (itemType != null)
 			{
@@ -78,10 +91,7 @@ namespace Zappos.Pages
 		/// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
 		protected override void SaveState(Dictionary<String, Object> pageState)
 		{
-			// JCTODO
-
-			//var selectedItem = (PitchItem)this.flipView.SelectedItem;
-			//pageState["SelectedItem"] = selectedItem.UniqueId;
+			pageState["SelectedItem"] = _selectedItem;
 		}
 
 		/// <summary>

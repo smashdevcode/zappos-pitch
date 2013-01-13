@@ -27,11 +27,9 @@
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" 
-					Style="{StaticResource BackButtonStyle}"/>
+			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}"/>
 			<Image Source="{StaticResource ZapposHeaderLogo}" Grid.Column="1" 
 				   AutomationProperties.Name="Zappos.com" Margin="-30,0,0,0" Stretch="None" HorizontalAlignment="Left"/>
-			<!--<TextBlock x:Name="pageTitle" Text="{Binding Group.Title}" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="1" IsHitTestVisible="false"/>-->
 		</Grid>
 
 		<usercontrols:BreadcrumbMenu x:Name="BreadcrumbMenu" Grid.Row="1" Margin="120,-20,0,0" Navigate="BreadcrumbMenu_Navigate_1"/>
