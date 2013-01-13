@@ -24,12 +24,12 @@ namespace Zappos.UserControls
 
 		private void ProjectTimelineButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			NavigateToItemDetailPage("ProjectTimeline");
 		}
 
 		private void TechnicalRequirementsButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			NavigateToItemDetailPage("TechnicalRequirements");
 		}
 	}
 }
