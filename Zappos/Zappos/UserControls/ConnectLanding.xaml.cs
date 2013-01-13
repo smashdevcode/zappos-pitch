@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,17 +25,25 @@ namespace Zappos.UserControls
 
 		private void TwitterButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			OpenUrl("https://twitter.com/csgpro");
 		}
 
 		private void LinkedInButton_Click_1(object sender, RoutedEventArgs e)
 		{
-
+			OpenUrl("http://www.linkedin.com/company/67626");
 		}
 
 		private void OurWebsiteButton_Click_1(object sender, RoutedEventArgs e)
 		{
+			OpenUrl("http://www.csgpro.com/");
+		}
 
+		private void OpenUrl(string url)
+		{
+			var uri = new Uri(url);
+			var options = new LauncherOptions();
+			options.TreatAsUntrusted = false;
+			var success = Launcher.LaunchUriAsync(uri, options);
 		}
 	}
 }

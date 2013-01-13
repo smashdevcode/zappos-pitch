@@ -194,6 +194,8 @@
     <Content Include="Assets\BreadcrumbMenuArrowLight.png" />
     <Content Include="Assets\BreadcrumbMenuArrowSmallDark.png" />
     <Content Include="Assets\BreadcrumbMenuArrowSmallLight.png" />
+    <Content Include="Assets\HomeIcon.png" />
+    <Content Include="Assets\LinkedInIcon.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\PhotoChick1.jpg" />
     <Content Include="Assets\PhotoChick2.jpg" />
@@ -210,6 +212,7 @@
     <Content Include="Assets\DarkGray.png" />
     <Content Include="Assets\Temp1.png" />
     <Content Include="Assets\Temp2.png" />
+    <Content Include="Assets\TwitterIcon.png" />
     <Content Include="Assets\ZapposHeaderLogo.png" />
     <Content Include="Assets\ZapposLogo.png" />
     <Content Include="Assets\ZapposSmallLogo.png" />

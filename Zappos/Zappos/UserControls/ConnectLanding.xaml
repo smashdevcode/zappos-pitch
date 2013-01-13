@@ -34,24 +34,24 @@
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<Button x:Name="TwitterButton" Style="{StaticResource LandingPageButtonStyle}" 
-					Click="TwitterButton_Click_1" Grid.Column="1">
+					Click="TwitterButton_Click_1" Grid.Column="1" Margin="20,0">
 				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<Image Margin="0,2,8,0" Stretch="None" VerticalAlignment="Center" Source="/Assets/TwitterIcon.png"/>
 					<TextBlock Text="Twitter" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
-					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
 				</StackPanel>
 			</Button>
 			<Button x:Name="LinkedInButton" Style="{StaticResource LandingPageButtonStyle}" 
-					Click="LinkedInButton_Click_1" Grid.Column="2">
+					Click="LinkedInButton_Click_1" Grid.Column="2" Margin="20,0">
 				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<Image Margin="0,2,8,0" Stretch="None" VerticalAlignment="Center" Source="/Assets/LinkedInIcon.png"/>
 					<TextBlock Text="LinkedIn" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
-					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
 				</StackPanel>
 			</Button>
 			<Button x:Name="OurWebsiteButton" Style="{StaticResource LandingPageButtonStyle}" 
-					Click="OurWebsiteButton_Click_1" Grid.Column="3">
+					Click="OurWebsiteButton_Click_1" Grid.Column="3" Margin="20,0">
 				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<Image Margin="0,2,8,0" Stretch="None" VerticalAlignment="Center" Source="/Assets/HomeIcon.png"/>
 					<TextBlock Text="Our Website" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
-					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
 				</StackPanel>
 			</Button>
 		</Grid>
