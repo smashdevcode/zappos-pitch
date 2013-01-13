@@ -10,7 +10,46 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Testing Methods</TextBlock>
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="Testing Methods" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1"/>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,0,0" Grid.Row="2" Grid.Column="1">
+			<Paragraph Margin="0,0,0,10">
+				Software Testing and QA is a big topic. Breaking it down to the key elements, we focus on:
+			</Paragraph>
+			<Paragraph Margin="0,0,0,10">
+				&#x25AA; Developer testing – The developer is responsible for initial testing.
+				<LineBreak/>
+				&#x25AA; Functional Testing – Working from test plans and test cases, we verify that the software fulfills
+				<LineBreak/>
+				&#160;&#160;&#160;the requirements and functions as designed
+				<LineBreak/>
+				&#x25AA; Defect Management – tracking, reporting, prioritizing and closed loop verification
+				<LineBreak/>
+				&#x25AA; Usability Testing
+				<LineBreak/>
+				&#x25AA; Performance Testing
+				<LineBreak/>
+				&#x25AA; Regression Testing
+				<LineBreak/>
+				&#x25AA; Client Acceptance Testing
+			</Paragraph>
+			<Paragraph TextAlignment="Center">
+				Many CSG clients insist on owning some or all of the QA process. We are comfortable working in an integrated 
+				team model, conforming to the client's QA process and standards.
+			</Paragraph>
+		</RichTextBlock>
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
 	</Grid>
 </common:UserControlBase>

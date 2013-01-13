@@ -28,8 +28,8 @@
 			<TextBlock Text="Earn 10K for App Development" Style="{StaticResource DetailPageTitleStyleLight}"/>
 			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}">
 				<Paragraph>
-					The standard MAAP customer offer includes 10K for Windows 8 application design/development guidance and 
-					support from a partner or MCS. CSG has worked with Microsoft to qualify Zappos for this program, just ask us how!
+					The standard MAAP customer offer includes $10K for Windows 8 application design/development guidance and 
+					support from a partner or MCS. CSG has worked with Microsoft to qualify Zappos for this program; just ask us how!
 				</Paragraph>
 			</RichTextBlock>
 			<Button x:Name="ViewMAAPSlideshowButton" Style="{StaticResource DetailPageButtonStyleLight}" 

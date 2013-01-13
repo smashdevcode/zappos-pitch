@@ -26,7 +26,7 @@
 		</Grid.ColumnDefinitions>
 		<TextBlock Text="Project Management" Style="{StaticResource DetailPageTitleStyleLight}" 
 				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="0,0,40,0" Grid.Row="2" Grid.Column="1" >
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="1" >
 			<Paragraph Margin="0,0,0,10">
 				Project success is the prime objective, and success is always defined by the client.
 			</Paragraph>
