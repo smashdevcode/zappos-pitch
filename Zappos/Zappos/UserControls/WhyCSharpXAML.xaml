@@ -10,7 +10,53 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Why C#/XAML?</TextBlock>
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="Why Use C#/XAML to Create the App?" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" FontSize="19" LineHeight="21" 
+					   Grid.Row="2" Grid.Column="1">
+			<Paragraph Margin="0,0,0,10">
+				Windows 8 provides no-compromise options for developers from a variety of backgrounds, by offering the choice of 
+				C++/XAML, C#/XAML, and JavaScript/HTML for developing Windows Store Applications (formerly known as Metro Styled 
+				Applications). CSG Pro's developers have deep experience with developing both web and desktop based applications, 
+				but for the following reasons, we are recommending C#/XAML for the Zappos.com Windows Store Application.
+			</Paragraph>
+			<Paragraph>
+				<Run FontWeight="Bold">Developer Productivity.</Run> C# offers unparalleled tooling support when compared to JavaScript, 
+				including powerful debugging, rich refactoring, and full IntelliSense support within Visual Studio. C# also offers 
+				key language features over JavaScript, including compilation-time error checking and native support for object-orientated 
+				constructs such as classes and interfaces.
+			</Paragraph>
+		</RichTextBlock>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="0,0,0,0" FontSize="19" LineHeight="21" 
+					   Grid.Row="2" Grid.Column="2">
+			<Paragraph Margin="0,0,0,10">
+				<Run FontWeight="Bold">Data Binding.</Run> XAML offers native support for data binding that is both rich and powerful. 
+				Data binding makes patterns such as MVVM (Model-View-ViewModel) possible, simplifying the development of the UI layer.
+			</Paragraph>
+			<Paragraph Margin="0,0,0,10">
+				<Run FontWeight="Bold">MVVM.</Run> The Model-View-ViewModel pattern allows developers to abstract away the display 
+				logic for the presentation layer into a set of view model classes. This allows for the clean separation between the 
+				XAML based views and the C# based view model classes, which eases the development of the UI layer and provides support 
+				for unit testing the view model classes.
+			</Paragraph>
+			<Paragraph>
+				<Run FontWeight="Bold">LINQ.</Run> Using C# means that you have access to .NET’s LINQ (Language-Integrated Query) 
+				capabilities. Having the ability to filter and sort data client-side is both simultaneously powerful and incredibly useful.
+			</Paragraph>
+		</RichTextBlock>
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
 	</Grid>
 </common:UserControlBase>
