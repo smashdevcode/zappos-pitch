@@ -18,6 +18,9 @@
       <VisualElements DisplayName="Zappos.com" Logo="Assets\ZapposLogo.png" SmallLogo="Assets\ZapposSmallLogo.png" Description="Zappos.com" ForegroundText="dark" BackgroundColor="#F8F8EE">
         <DefaultTile ShowName="noLogos" WideLogo="Assets\ZapposWideLogo.png" />
         <SplashScreen Image="Assets\ZapposSplashScreen.png" BackgroundColor="#F8F8EE" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>
