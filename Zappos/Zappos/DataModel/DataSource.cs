@@ -134,12 +134,10 @@ namespace Zappos.Data
 			var projectManagement = new PitchItem(
 				"ProjectManagement",
 				"Project Management",
-				colorScheme: PageColorScheme.Dark,
 				parentPitchItem: aboutCSGsApproach);
 			var testingMethods = new PitchItem(
 				"TestingMethods",
 				"Testing Methods",
-				colorScheme: PageColorScheme.Dark,
 				parentPitchItem: aboutCSGsApproach);
 			this.AllItems.Add(projectManagement);
 			this.AllItems.Add(testingMethods);

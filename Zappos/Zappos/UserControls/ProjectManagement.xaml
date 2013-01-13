@@ -10,7 +10,62 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Project Management</TextBlock>
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="Project Management" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="0,0,40,0" Grid.Row="2" Grid.Column="1" >
+			<Paragraph Margin="0,0,0,10">
+				Project success is the prime objective, and success is always defined by the client.
+			</Paragraph>
+			<Paragraph>
+				Project Management practices must be Agile and tailored to fit the project. Process rigor and 
+				formality must be applied based on the needs of the client and the nature of the project. 
+				We believe iterative development is the only way to go.
+			</Paragraph>
+		</RichTextBlock>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="0,0,0,0" Grid.Row="2" Grid.Column="2">
+			<Paragraph Margin="0,0,0,10">
+				How do we succeed?
+				<LineBreak/>
+				&#x25AA; Define what success means from the start
+				<LineBreak/>
+				&#x25AA; Relentlessly Communicate, Collaborate and Coordinate
+			</Paragraph>
+			<Paragraph>
+				We Manage:
+				<LineBreak/>
+				&#x25AA; Expectations (No surprises)
+				<LineBreak/>
+				&#x25AA; Requirements and Priorities
+				<LineBreak/>
+				&#160;&#160;&#160;(Functionality, Budget, Schedule, Quality)
+				<LineBreak/>
+				&#x25AA; Change (It's inevitable, so embrace it)
+				<LineBreak/>
+				&#x25AA; Risk (know it, anticipate it, mitigate it)
+				<LineBreak/>
+				&#x25AA; Manage Tasks (hold each other accountable)
+			</Paragraph>
+		</RichTextBlock>
+		<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="0,20,0,0" 
+					   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+			<Paragraph TextAlignment="Center">
+				<Run FontStyle="Italic">Always, have fun. Doing what you love shouldn't seem like work!</Run>
+			</Paragraph>
+		</RichTextBlock>		
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
 	</Grid>
 </common:UserControlBase>

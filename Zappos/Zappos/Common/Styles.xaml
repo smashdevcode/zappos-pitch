@@ -231,7 +231,8 @@
 
 	<Style x:Key="DetailPageRichTextBlockStyleLight" TargetType="RichTextBlock">
 		<Setter Property="Foreground" Value="#000000"/>
-		<Setter Property="FontSize" Value="26"/>
+		<Setter Property="FontSize" Value="24"/>
+		<Setter Property="LineHeight" Value="26"/>
 		<Setter Property="FontFamily" Value="Segoe UI"/>
 		<Setter Property="FontWeight" Value="Light"/>
 	</Style>
