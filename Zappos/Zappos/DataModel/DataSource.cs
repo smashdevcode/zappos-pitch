@@ -43,7 +43,7 @@ namespace Zappos.Data
 		{
 			//Windows Store Application
 			//	Welcome to CSG Pro
-			//		Meet Our Management
+			//		Meet the CSG Management Team
 			//		Where We Work
 			//		Learn Our History
 
@@ -67,7 +67,7 @@ namespace Zappos.Data
 
 			var meetTheTeam = new PitchItem(
 				"MeetTheTeam",
-				"Meet the Team",
+				"Meet the CSG Management Team",
 				parentPitchItem: welcomeToCSGPro);
 			var whereWeWork = new PitchItem(
 				"WhereWeWork",

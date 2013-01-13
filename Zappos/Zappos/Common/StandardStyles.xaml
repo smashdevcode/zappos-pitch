@@ -45,7 +45,7 @@
 
 	<SolidColorBrush x:Key="ApplicationForegroundThemeBrush" Color="#333333"/>
 	<SolidColorBrush x:Key="ApplicationSecondaryForegroundThemeBrush" Color="#4F81BD"/>
-	<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#F8F8EE"/>
+	<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FFFFFF"/>
 	<SolidColorBrush x:Key="ApplicationPointerOverForegroundThemeBrush" Color="#558ABE"/>
 	<SolidColorBrush x:Key="ApplicationPressedForegroundThemeBrush" Color="#2C5987"/>
 	<SolidColorBrush x:Key="ApplicationHeaderForegroundThemeBrush" Color="#2C5987"/>

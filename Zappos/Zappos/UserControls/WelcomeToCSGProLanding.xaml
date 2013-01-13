@@ -10,12 +10,51 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
     
-    <Grid Background="Blue">
-		<StackPanel>
-			<TextBlock FontSize="80" Margin="50,200,0,0">Welcome to CSG Pro</TextBlock>
-			<Button x:Name="MeetTheTeamButton" Content="Meet the team" Click="MeetTheTeamButton_Click_1"/>
-			<Button x:Name="WhereWeWorkButton" Content="Where we work" Click="WhereWeWorkButton_Click_1"/>
-			<Button x:Name="LearnOurHistory" Content="Learn our history" Click="LearnOurHistory_Click_1"/>
-		</StackPanel>
-    </Grid>
+    <Grid Background="#FF3D8DE4">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="3*"/>
+    		<RowDefinition Height="2*"/>
+    		<RowDefinition Height="100"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="*"/>
+    		<ColumnDefinition Width="10*"/>
+    		<ColumnDefinition Width="*"/>
+    	</Grid.ColumnDefinitions>
+		<TextBlock Grid.Column="1" Text="Welcome to CSG Pro" Style="{StaticResource LandingPageTitleStyle}"/>
+		<Grid Grid.Column="1" Grid.Row="1" Style="{StaticResource LandingPageButtonContainerStyle}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name="MeetTheTeamButton" Style="{StaticResource LandingPageButtonStyle}" 
+					Click="MeetTheTeamButton_Click_1" Grid.Column="1">
+				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<TextBlock Text="Meet the team" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
+					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
+				</StackPanel>
+			</Button>			
+			<Button x:Name="WhereWeWorkButton" Style="{StaticResource LandingPageButtonStyle}" 
+					Click="WhereWeWorkButton_Click_1" Grid.Column="2">
+				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<TextBlock Text="Where we work" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
+					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
+				</StackPanel>
+			</Button>
+			<Button x:Name="LearnOurHistory" Style="{StaticResource LandingPageButtonStyle}" 
+					Click="LearnOurHistory_Click_1" Grid.Column="3">
+				<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+					<TextBlock Text="Learn our history" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
+					<Image Style="{StaticResource LandingPageButtonImageStyle}"/>
+				</StackPanel>
+			</Button>
+		</Grid>
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="2"/>
+	</Grid>
 </common:UserControlBase>
