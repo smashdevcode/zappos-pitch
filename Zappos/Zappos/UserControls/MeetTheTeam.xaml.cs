@@ -21,5 +21,20 @@ namespace Zappos.UserControls
 		{
 			this.InitializeComponent();
 		}
+
+		private void RonPhoto_Tapped_1(object sender, TappedRoutedEventArgs e)
+		{
+
+		}
+
+		private void KevinPhoto_Tapped_1(object sender, TappedRoutedEventArgs e)
+		{
+
+		}
+
+		private void JamesPhoto_Tapped_1(object sender, TappedRoutedEventArgs e)
+		{
+
+		}
 	}
 }

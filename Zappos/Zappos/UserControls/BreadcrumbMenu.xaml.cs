@@ -128,7 +128,7 @@ namespace Zappos.UserControls
 							throw new Exception("Any pitch item that does not have a parent pitch item, should have a reference to a group.");
 
 						// setup the group button
-						var groupButton = GetButton(pitchItem.Group.Title);
+						var groupButton = GetButton("Home");
 						groupButton.Click += (clickSender, clickEventArgs) =>
 						{
 							NavigateToHomePage();

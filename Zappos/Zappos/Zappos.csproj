@@ -177,8 +177,11 @@
     </AppxManifest>
     <Content Include="Assets\ArrowLight.png" />
     <Content Include="Assets\CSGLogo.png" />
+    <Content Include="Assets\JamesPhoto.png" />
+    <Content Include="Assets\KevinPhoto.png" />
     <Content Include="Assets\PortlandBike.png" />
     <Content Include="Assets\PortlandiaVideo.mp4" />
+    <Content Include="Assets\RonPhoto.png" />
     <Content Include="Assets\Windows 8 MAAP Customer.pdf" />
     <None Include="Common\ReadMe.txt" />
     <None Include="Zappos_TemporaryKey.pfx" />

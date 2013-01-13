@@ -9,8 +9,49 @@
     mc:Ignorable="d"
     d:DesignHeight="768"
     d:DesignWidth="1366">
+	
+	<common:UserControlBase.Resources>
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Meet the CSG Management Team</TextBlock>
+		<Style x:Key="ImageStyle" TargetType="Image">
+			<Setter Property="Stretch" Value="None"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
+		</Style>
+
+		<Style x:Key="JobTitleTextBlockStyle" TargetType="TextBlock">
+			<Setter Property="Foreground" Value="#000000"/>
+			<Setter Property="FontSize" Value="18"/>
+			<Setter Property="LineHeight" Value="20"/>
+		</Style>
+
+	</common:UserControlBase.Resources>
+
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="3.33*"/>
+			<ColumnDefinition Width="3.33*"/>
+			<ColumnDefinition Width="3.33*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Text="Meet the CSG Management Team" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+		<Image x:Name="RonPhoto" Source="/Assets/RonPhoto.png" Grid.Column="1" Grid.Row="2" 
+			   Style="{StaticResource ImageStyle}" Tapped="RonPhoto_Tapped_1"/>
+		<Image x:Name="KevinPhoto" Source="/Assets/KevinPhoto.png" Grid.Column="2" Grid.Row="2" 
+			   Style="{StaticResource ImageStyle}" Tapped="KevinPhoto_Tapped_1"/>
+		<Image x:Name="JamesPhoto" Source="/Assets/JamesPhoto.png" Grid.Column="3" Grid.Row="2" 
+			   Style="{StaticResource ImageStyle}" Tapped="JamesPhoto_Tapped_1"/>
+		<TextBlock Text="Ron Ellis Gaut&#10;Director&#10;Consulting" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="1" Grid.Row="2" Margin="0,40,0,0"/>
+		<TextBlock Text="Kevin McVicker&#10;President" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="2" Grid.Row="2" Margin="0,40,0,0"/>
+		<TextBlock Text="James Churchill&#10;Practice Mgr&#10;App Dev" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="3" Grid.Row="2" Margin="0,40,0,0"/>
 	</Grid>
 </common:UserControlBase>

@@ -43,7 +43,7 @@
 	
 	<!-- System Wide Overrides -->
 
-	<SolidColorBrush x:Key="ApplicationForegroundThemeBrush" Color="#333333"/>
+	<SolidColorBrush x:Key="ApplicationForegroundThemeBrush" Color="#000000"/>
 	<SolidColorBrush x:Key="ApplicationSecondaryForegroundThemeBrush" Color="#4F81BD"/>
 	<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FFFFFF"/>
 	<SolidColorBrush x:Key="ApplicationPointerOverForegroundThemeBrush" Color="#558ABE"/>
