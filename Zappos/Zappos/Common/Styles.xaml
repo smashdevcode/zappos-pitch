@@ -16,10 +16,6 @@
 	
 	<SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="#666666"/>
 
-	<Style x:Key="ZapposLayoutRootStyle" TargetType="Panel" BasedOn="{StaticResource LayoutRootStyle}">
-		<!--<Setter Property="Background" Value="{StaticResource ZapposBackgroundBrush}"/>-->
-	</Style>
-	
 	<BitmapImage x:Key="ZapposHeaderLogo" UriSource="/Assets/ZapposHeaderLogo.png"/>
 	<BitmapImage x:Key="BreadcrumbMenuArrowSmallDark" UriSource="/Assets/BreadcrumbMenuArrowSmallDark.png"/>
 	<BitmapImage x:Key="BreadcrumbMenuArrowSmallLight" UriSource="/Assets/BreadcrumbMenuArrowSmallLight.png"/>

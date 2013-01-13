@@ -18,7 +18,7 @@
 			d:Source="{Binding AllPitchItems, Source={d:DesignInstance Type=data:DataSource, IsDesignTimeCreatable=True}}"/>
 	</Page.Resources>
 
-	<Grid Style="{StaticResource ZapposLayoutRootStyle}">
+	<Grid Style="{StaticResource LayoutRootStyle}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="140"/>
 			<RowDefinition Height="*"/>
