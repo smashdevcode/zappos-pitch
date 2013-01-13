@@ -10,7 +10,36 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Microsoft Application Acceleration Program (MAAP)</TextBlock>
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="260"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Image Source="/Assets/MicrosoftLogo.png" VerticalAlignment="Center" Stretch="None" 
+			   Grid.Row="1" Grid.Column="1"/>
+		<StackPanel Grid.Row="1" Grid.Column="2" Margin="0,120,0,0">
+			<TextBlock Text="Earn 10K for App Development" Style="{StaticResource DetailPageTitleStyleLight}"/>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}">
+				<Paragraph>
+					The standard MAAP customer offer includes 10K for Windows 8 application design/development guidance and 
+					support from a partner or MCS. CSG has worked with Microsoft to qualify Zappos for this program, just ask us how!
+				</Paragraph>
+			</RichTextBlock>
+			<Button x:Name="ViewMAAPSlideshowButton" Style="{StaticResource DetailPageButtonStyleLight}" 
+					Click="ViewMAAPSlideshowButton_Click_1" VerticalAlignment="Bottom" Margin="0,20,0,0">
+				<StackPanel Style="{StaticResource DetailPageButtonStackPanelStyle}">
+					<TextBlock Text="View Microsoft's (MAAP) Slideshow Presentation" Style="{StaticResource DetailPageButtonTextBlockStyleLight}"/>
+					<Image Style="{StaticResource DetailPageButtonImageStyleLight}"/>
+				</StackPanel>
+			</Button>
+		</StackPanel>
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
 	</Grid>
 </common:UserControlBase>

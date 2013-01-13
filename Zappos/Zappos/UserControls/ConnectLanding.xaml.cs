@@ -37,13 +37,5 @@ namespace Zappos.UserControls
 		{
 			OpenUrl("http://www.csgpro.com/");
 		}
-
-		private void OpenUrl(string url)
-		{
-			var uri = new Uri(url);
-			var options = new LauncherOptions();
-			options.TreatAsUntrusted = false;
-			var success = Launcher.LaunchUriAsync(uri, options);
-		}
 	}
 }

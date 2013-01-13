@@ -21,5 +21,10 @@ namespace Zappos.UserControls
 		{
 			this.InitializeComponent();
 		}
+
+		private void ViewMAAPSlideshowButton_Click_1(object sender, RoutedEventArgs e)
+		{
+			OpenFile(@"Assets\Windows 8 MAAP Customer.pdf");
+		}
 	}
 }

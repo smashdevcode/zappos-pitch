@@ -172,11 +172,12 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\Windows 8 MAAP Customer.pdf" />
     <None Include="Common\ReadMe.txt" />
     <None Include="Zappos_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Arrow.png" />
+    <Content Include="Assets\ArrowDark.png" />
     <Content Include="Assets\BreadcrumbMenuArrowDark.png" />
     <Content Include="Assets\BreadcrumbMenuArrowLight.png" />
     <Content Include="Assets\BreadcrumbMenuArrowSmallDark.png" />
@@ -184,6 +185,7 @@
     <Content Include="Assets\Clock.png" />
     <Content Include="Assets\HomeIcon.png" />
     <Content Include="Assets\LinkedInIcon.png" />
+    <Content Include="Assets\MicrosoftLogo.png" />
     <Content Include="Assets\Paintbrush.png" />
     <Content Include="Assets\PhotoChick2.jpg" />
     <Content Include="Assets\PhotoChick1.jpg" />

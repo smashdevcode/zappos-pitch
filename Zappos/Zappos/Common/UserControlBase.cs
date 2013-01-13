@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Zappos.Pages;
 
@@ -52,6 +54,33 @@ namespace Zappos.Common
 		public void NavigateToItemDetailPage(string itemId)
 		{
 			OnNavigate(typeof(ItemDetail), itemId);
+		}
+		public async void OpenUrl(string url)
+		{
+			var uri = new Uri(url);
+			var options = new LauncherOptions();
+			options.TreatAsUntrusted = false;
+			var success = await Launcher.LaunchUriAsync(uri, options);
+		}
+		public async void OpenFile(string fileName)
+		{
+			var uri = new Uri(string.Format("ms-appx:///{0}", fileName));
+			var file = await StorageFile.GetFileFromApplicationUriAsync(uri);
+
+			if (file != null)
+			{
+				var options = new Windows.System.LauncherOptions();
+				//options.DisplayApplicationPicker = true;
+				bool success = await Launcher.LaunchFileAsync(file, options);
+				//if (success)
+				//{
+				//	// File launched
+				//}
+				//else
+				//{
+				//	// File launch failed
+				//}
+			}
 		}
 		#endregion
 	}
