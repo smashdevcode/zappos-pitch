@@ -57,7 +57,7 @@ namespace Zappos.Data
 				"Let us put a smile on your face. Learn more about CSG Pro.",
 				null,
 				null,
-				"Assets/PhotoChick4.jpg",
+				"Assets/PhotoChick1.jpg",
 				null,
 				PageColorScheme.Dark,
 				HomeTileLayout.ExtraWide,
