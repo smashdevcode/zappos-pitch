@@ -21,5 +21,15 @@ namespace Zappos.UserControls
 		{
 			this.InitializeComponent();
 		}
+
+		private void ProjectTimelineButton_Click_1(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void TechnicalRequirementsButton_Click_1(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

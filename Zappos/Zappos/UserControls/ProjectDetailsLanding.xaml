@@ -9,8 +9,47 @@
     mc:Ignorable="d"
     d:DesignHeight="768"
     d:DesignWidth="1366">
+	
+	<common:UserControlBase.Resources>
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Project Details</TextBlock>
+		<Style x:Key="LandingPageButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyleLight}">
+			<Setter Property="BorderBrush" Value="Transparent"/>
+		</Style>
+
+		<Style x:Key="LandingPageButtonTextBlockStyle" TargetType="TextBlock">
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="Segoe UI"/>
+			<Setter Property="FontWeight" Value="Light"/>
+			<Setter Property="FontSize" Value="60"/>
+		</Style>
+		
+	</common:UserControlBase.Resources>
+
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1.5*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="100"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Button x:Name="ProjectTimelineButton" Style="{StaticResource LandingPageButtonStyle}" 
+				Click="ProjectTimelineButton_Click_1" VerticalAlignment="Bottom" Margin="0,0,0,0" Grid.Column="1">
+			<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+				<Image Margin="17,2,20,0" Stretch="None" VerticalAlignment="Center" Source="/Assets/Clock.png"/>
+				<TextBlock Text="View the Project Timeline" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
+			</StackPanel>
+		</Button>
+		<Button x:Name="TechnicalRequirementsButton" Style="{StaticResource LandingPageButtonStyle}" 
+				Click="TechnicalRequirementsButton_Click_1" VerticalAlignment="Top" Margin="0,20,0,0" Grid.Row="1" Grid.Column="1">
+			<StackPanel Style="{StaticResource LandingPageButtonStackPanelStyle}">
+				<Image Margin="0,2,20,0" Stretch="None" VerticalAlignment="Center" Source="/Assets/Paintbrush.png"/>
+				<TextBlock Text="View the Technical Requirements" Style="{StaticResource LandingPageButtonTextBlockStyle}"/>
+			</StackPanel>
+		</Button>
+		<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="2"/>
 	</Grid>
 </common:UserControlBase>
