@@ -172,6 +172,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\ArrowLight.png" />
     <Content Include="Assets\Windows 8 MAAP Customer.pdf" />
     <None Include="Common\ReadMe.txt" />
     <None Include="Zappos_TemporaryKey.pfx" />
