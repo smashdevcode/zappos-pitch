@@ -10,7 +10,288 @@
     d:DesignHeight="768"
     d:DesignWidth="1366">
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Project Timeline</TextBlock>
+	<common:UserControlBase.Resources>
+
+		<Storyboard x:Name="HideWeek1Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week1Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek1Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week1Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek2Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week2Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek2Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week2Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek3Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week3Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek3Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week3Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek4Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week4Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek4Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week4Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek6Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week6Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek6Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week6Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek7Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week7Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek7Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week7Grid"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideWeek8Grid">
+			<PopOutThemeAnimation Storyboard.TargetName="Week8Grid"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowWeek8Grid">
+			<PopInThemeAnimation Storyboard.TargetName="Week8Grid"/>
+		</Storyboard>
+
+	</common:UserControlBase.Resources>
+
+	<Grid Background="#FFFFFFFF">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="180"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Canvas Grid.Column="1" HorizontalAlignment="Left" Height="588" Grid.Row="1" VerticalAlignment="Top" Width="1138">
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="28" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="50" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="72" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="94" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="116" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="138" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="160" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="182" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="204" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="226" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="248" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="270" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="292" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="314" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="336" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="358" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="380" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="402" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="424" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="446" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="468" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="490" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="512" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="534" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="556" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="578" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="600" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="622" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="644" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="666" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="688" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="710" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="732" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="754" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="776" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="798" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="820" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="842" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="864" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="886" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="908" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="930" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="952" Stroke="Black" Canvas.Top="518" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="974" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="996" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="1018" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="1040" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="1062" Stroke="Black" Canvas.Top="538" Width="1"/>
+			<Rectangle Fill="#FF000000" Height="50" Canvas.Left="1084" Stroke="Black" Canvas.Top="538" Width="1"/>
+
+			<Rectangle Fill="#FF000000" Height="70" Canvas.Left="1106" Stroke="Black" Canvas.Top="518" Width="1"/>
+
+			<Ellipse x:Name="Week1Circle" Fill="#FF000000" Height="50" Canvas.Left="1" Stroke="Black" Canvas.Top="451" Width="50" Tapped="Week1Circle_Tapped_1"/>
+			<Ellipse x:Name="Week2Circle" Fill="#FF000000" Height="50" Canvas.Left="155" Stroke="Black" Canvas.Top="430" Width="50" Tapped="Week2Circle_Tapped_1"/>
+			<Ellipse x:Name="Week3Circle" Fill="#FF000000" Height="50" Canvas.Left="309" Stroke="Black" Canvas.Top="407" Width="50" Tapped="Week3Circle_Tapped_1"/>
+			<Ellipse x:Name="Week4Circle" Fill="#FF000000" Height="50" Canvas.Left="622" Stroke="Black" Canvas.Top="430" Width="50" Tapped="Week4Circle_Tapped_1"/>
+			<Ellipse x:Name="Week6Circle" Fill="#FF000000" Height="50" Canvas.Left="776" Stroke="Black" Canvas.Top="418" Width="50" Tapped="Week6Circle_Tapped_1"/>
+			<Ellipse x:Name="Week7Circle" Fill="#FF000000" Height="50" Canvas.Left="930" Stroke="Black" Canvas.Top="407" Width="50" Tapped="Week7Circle_Tapped_1"/>
+			<Ellipse x:Name="Week8Circle" Fill="#FF000000" Height="50" Canvas.Left="1084" Stroke="Black" Canvas.Top="375" Width="50" Tapped="Week8Circle_Tapped_1"/>
+
+			<Grid x:Name="Week1Grid" Canvas.Left="-50" Canvas.Top="215" Height="126" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="150"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">8 weeks to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Top">
+					Review designs and technical requirements for the first version of the app.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week2Grid" Canvas.Left="20" Canvas.Top="252" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="100"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">7 weeks to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					Weekly meetings will be held with CSG and Zappos project teams.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week3Grid" Canvas.Left="190" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="150"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">6 weeks to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					After gathering and assimilating the requirements for design &amp; development we go into 
+					the first building phase of the application.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week4Grid" Canvas.Left="497" Canvas.Top="225" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="150"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">3 weeks to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					After the initial development phase we will release the first version of the app for testing. 
+					Selected internal staff will review the app's overall functionality.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week6Grid" Canvas.Left="651" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="150"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">2 weeks to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					After the first version has been tested we will go through a two week revisions phase. Periodic 
+					testing and revisions will occur throughout this process.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week7Grid" Canvas.Left="812" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="75"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">1 week to launch</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					Final application revisions will be made.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week8Grid" Canvas.Left="842" Canvas.Top="127" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="215"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="150"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
+						   LineHeight="18" VerticalAlignment="Center">Launch!</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
+						   LineHeight="18">
+					Upon the public launch of the app we will go into support mode. Working directly with 
+					Zappos.com management to process and handle support request, bugs and future enhancements. 
+				</TextBlock>
+			</Grid>
+
+		</Canvas>
 	</Grid>
 </common:UserControlBase>
