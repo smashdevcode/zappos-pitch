@@ -141,139 +141,118 @@
 			<Ellipse x:Name="Week7Circle" Fill="#FF000000" Height="50" Canvas.Left="930" Stroke="Black" Canvas.Top="407" Width="50" Tapped="Week7Circle_Tapped_1"/>
 			<Ellipse x:Name="Week8Circle" Fill="#FF000000" Height="50" Canvas.Left="1084" Stroke="Black" Canvas.Top="375" Width="50" Tapped="Week8Circle_Tapped_1"/>
 
-			<Grid x:Name="Week1Grid" Canvas.Left="-50" Canvas.Top="215" Height="126" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week1Grid" Canvas.Left="-50" Canvas.Top="140" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
-					<RowDefinition Height="150"/>
+					<RowDefinition Height="250"/>
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">8 weeks to launch</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">8 weeks to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Top">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Top">
 					Review designs and technical requirements for the first version of the app.
 				</TextBlock>
 			</Grid>
 
-			<Grid x:Name="Week2Grid" Canvas.Left="20" Canvas.Top="252" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week2Grid" Canvas.Left="20" Canvas.Top="175" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
-					<RowDefinition Height="100"/>
+					<RowDefinition Height="175"/>
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">7 weeks to launch</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">7 weeks to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
 					Weekly meetings will be held with CSG and Zappos project teams.
 				</TextBlock>
 			</Grid>
 
-			<Grid x:Name="Week3Grid" Canvas.Left="190" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week3Grid" Canvas.Left="190" Canvas.Top="125" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
-					<RowDefinition Height="150"/>
+					<RowDefinition Height="225"/>
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">6 weeks to launch</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">6 weeks to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
 					After gathering and assimilating the requirements for design &amp; development we go into 
 					the first building phase of the application.
 				</TextBlock>
 			</Grid>
 
-			<Grid x:Name="Week4Grid" Canvas.Left="497" Canvas.Top="225" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week4Grid" Canvas.Left="497" Canvas.Top="125" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
-					<RowDefinition Height="150"/>
+					<RowDefinition Height="225"/>
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">3 weeks to launch</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">3 weeks to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
 					After the initial development phase we will release the first version of the app for testing. 
 					Selected internal staff will review the app's overall functionality.
 				</TextBlock>
 			</Grid>
 
-			<Grid x:Name="Week6Grid" Canvas.Left="651" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week6Grid" Canvas.Left="651" Canvas.Top="100" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
-					<RowDefinition Height="150"/>
+					<RowDefinition Height="225"/>
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">2 weeks to launch</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">2 weeks to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
 					After the first version has been tested we will go through a two week revisions phase. Periodic 
 					testing and revisions will occur throughout this process.
 				</TextBlock>
 			</Grid>
 
-			<Grid x:Name="Week7Grid" Canvas.Left="812" Canvas.Top="202" d:IsLocked="True" Visibility="Collapsed">
+			<Grid x:Name="Week7Grid" Canvas.Left="812" Canvas.Top="125" d:IsLocked="True" Visibility="Collapsed">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
-				</Grid.ColumnDefinitions>
-				<Grid.RowDefinitions>
-					<RowDefinition Height="50"/>
-					<RowDefinition Height="75"/>
-				</Grid.RowDefinitions>
-				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
-						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">1 week to launch</TextBlock>
-				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
-						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
-					Final application revisions will be made.
-				</TextBlock>
-			</Grid>
-
-			<Grid x:Name="Week8Grid" Canvas.Left="842" Canvas.Top="127" d:IsLocked="True" Visibility="Collapsed">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="65"/>
-					<ColumnDefinition Width="215"/>
+					<ColumnDefinition Width="250"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="50"/>
@@ -281,12 +260,33 @@
 				</Grid.RowDefinitions>
 				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
 						Source="/Assets/Clock.png" Stretch="Uniform"/>
-				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="16" 
-						   LineHeight="18" VerticalAlignment="Center">Launch!</TextBlock>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">1 week to launch</TextBlock>
 				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
 						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
-				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="16" 
-						   LineHeight="18">
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
+					Final application revisions will be made.
+				</TextBlock>
+			</Grid>
+
+			<Grid x:Name="Week8Grid" Canvas.Left="842" Canvas.Top="40" d:IsLocked="True" Visibility="Collapsed">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="65"/>
+					<ColumnDefinition Width="250"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+					<RowDefinition Height="225"/>
+				</Grid.RowDefinitions>
+				<Image HorizontalAlignment="Center" Height="30" VerticalAlignment="Center" Width="30" 
+						Source="/Assets/Clock.png" Stretch="Uniform"/>
+				<TextBlock Grid.Column="1" Foreground="#000000" FontSize="22" 
+						   LineHeight="24" VerticalAlignment="Center">Launch!</TextBlock>
+				<Image HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="38" 
+						Source="/Assets/Paintbrush.png" Stretch="Uniform" Grid.Row="1"/>
+				<TextBlock Grid.Row="1" Grid.Column="1" Foreground="#000000" TextWrapping="Wrap" FontSize="22" 
+						   LineHeight="24">
 					Upon the public launch of the app we will go into support mode. Working directly with 
 					Zappos.com management to process and handle support request, bugs and future enhancements. 
 				</TextBlock>
