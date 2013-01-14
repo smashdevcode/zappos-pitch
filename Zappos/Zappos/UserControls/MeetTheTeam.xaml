@@ -22,7 +22,48 @@
 			<Setter Property="Foreground" Value="#000000"/>
 			<Setter Property="FontSize" Value="18"/>
 			<Setter Property="LineHeight" Value="20"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="VerticalAlignment" Value="Bottom"/>
 		</Style>
+
+		<Style x:Key="QuoteBorderStyle" TargetType="Border">
+			<Setter Property="Background" Value="#99000000"/>
+			<Setter Property="CornerRadius" Value="10"/>
+		</Style>
+		
+		<Style x:Key="QuoteRichTextBlockStyle" TargetType="RichTextBlock">
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="LineHeight" Value="22"/>
+			<Setter Property="Foreground" Value="#FFFFFF"/>
+			<Setter Property="Margin" Value="20,20,20,0"/>
+		</Style>
+		
+		<Style x:Key="QuoteCloseButtonStyle" TargetType="Button">
+			<Setter Property="Content" Value="Close"/>
+			<Setter Property="HorizontalAlignment" Value="Right"/>
+			<Setter Property="Margin" Value="20,0,20,20"/>
+		</Style>
+
+		<Storyboard x:Name="HideRonQuote">
+			<PopOutThemeAnimation Storyboard.TargetName="RonQuote"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowRonQuote">
+			<PopInThemeAnimation Storyboard.TargetName="RonQuote"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideKevinQuote">
+			<PopOutThemeAnimation Storyboard.TargetName="KevinQuote"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowKevinQuote">
+			<PopInThemeAnimation Storyboard.TargetName="KevinQuote"/>
+		</Storyboard>
+
+		<Storyboard x:Name="HideJamesQuote">
+			<PopOutThemeAnimation Storyboard.TargetName="JamesQuote"/>
+		</Storyboard>
+		<Storyboard x:Name="ShowJamesQuote">
+			<PopInThemeAnimation Storyboard.TargetName="JamesQuote"/>
+		</Storyboard>
 
 	</common:UserControlBase.Resources>
 
@@ -41,17 +82,60 @@
 		</Grid.ColumnDefinitions>
 		<TextBlock Text="Meet the CSG Management Team" Style="{StaticResource DetailPageTitleStyleLight}" 
 				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+		<TextBlock x:Name="RonJobTitle" Text="Ron Ellis Gaut&#10;Director&#10;Consulting" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="1" Grid.Row="2" Margin="0,40,0,320"/>
+		<TextBlock x:Name="KevinJobTitle" Text="Kevin McVicker&#10;President" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="2" Grid.Row="2" Margin="-10,40,0,360"/>
+		<TextBlock x:Name="JamesJobTitle" Text="James Churchill&#10;Practice Mgr&#10;App Dev" Style="{StaticResource JobTitleTextBlockStyle}"
+				   Grid.Column="3" Grid.Row="2" Margin="0,40,0,330"/>
 		<Image x:Name="RonPhoto" Source="/Assets/RonPhoto.png" Grid.Column="1" Grid.Row="2" 
 			   Style="{StaticResource ImageStyle}" Tapped="RonPhoto_Tapped_1"/>
 		<Image x:Name="KevinPhoto" Source="/Assets/KevinPhoto.png" Grid.Column="2" Grid.Row="2" 
 			   Style="{StaticResource ImageStyle}" Tapped="KevinPhoto_Tapped_1"/>
 		<Image x:Name="JamesPhoto" Source="/Assets/JamesPhoto.png" Grid.Column="3" Grid.Row="2" 
 			   Style="{StaticResource ImageStyle}" Tapped="JamesPhoto_Tapped_1"/>
-		<TextBlock Text="Ron Ellis Gaut&#10;Director&#10;Consulting" Style="{StaticResource JobTitleTextBlockStyle}"
-				   Grid.Column="1" Grid.Row="2" Margin="0,40,0,0"/>
-		<TextBlock Text="Kevin McVicker&#10;President" Style="{StaticResource JobTitleTextBlockStyle}"
-				   Grid.Column="2" Grid.Row="2" Margin="0,40,0,0"/>
-		<TextBlock Text="James Churchill&#10;Practice Mgr&#10;App Dev" Style="{StaticResource JobTitleTextBlockStyle}"
-				   Grid.Column="3" Grid.Row="2" Margin="0,40,0,0"/>
+		<Border x:Name="RonQuote" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource QuoteBorderStyle}" Visibility="Collapsed" 
+				HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="600" Height="240" Margin="-40,0,0,20">
+			<StackPanel>
+				<RichTextBlock Style="{StaticResource QuoteRichTextBlockStyle}">
+					<Paragraph>
+						As a founding member of the CSG team with 20 years of history, there are a few really noteworthy engagements 
+						that stand out from all the rest. Developing this e-commerce app for Zappos feels like one of those and I am 
+						excited about that. It is the kind of project we live for (and our developers fight over). If given the chance 
+						to build this app, you get the very best CSG has to offer. Thanks for your consideration!
+					</Paragraph>
+				</RichTextBlock>
+				<Button x:Name="CloseRonQuoteButton" Click="CloseRonQuoteButton_Click_1" Style="{StaticResource QuoteCloseButtonStyle}"/>
+			</StackPanel>
+		</Border>
+		<Border x:Name="KevinQuote" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource QuoteBorderStyle}" Visibility="Collapsed" 
+				HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="800" Height="240" Margin="-200,0,0,20">
+			<StackPanel>
+				<RichTextBlock Style="{StaticResource QuoteRichTextBlockStyle}">
+					<Paragraph>
+						The <Run FontWeight="Bold">Zappos Family Core Values</Run> really align with CSG Pro and with me personally. 
+						Our stated goals are Do What's Right, Deliver Excellence, Team Over Self, and Create Value. We do our best to 
+						live this out in every client relationship and it is really easy when the client is after the same things. 
+						It looks like this would be our experience with Zappos and we would have a lot of fun along the way. Please feel 
+						free to call me if you have any questions or just want to chat. We are excited about the opportunity to work together.
+					</Paragraph>
+				</RichTextBlock>
+				<Button x:Name="CloseKevinQuoteButton" Click="CloseKevinQuoteButton_Click_1" Style="{StaticResource QuoteCloseButtonStyle}"/>
+			</StackPanel>
+		</Border>
+		<Border x:Name="JamesQuote" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource QuoteBorderStyle}" Visibility="Collapsed" 
+				HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="700" Height="240" Margin="-280,0,0,20">
+			<StackPanel>
+				<RichTextBlock Style="{StaticResource QuoteRichTextBlockStyle}">
+					<Paragraph>
+						I was there at Microsoft's 2011 Build Conference when Windows 8 was announced. Developers across the world 
+						(myself included) were excited about the possibilities that Windows 8, and in particular the Windows Store, 
+						represented. Getting companies like Zappos.com onto the Windows 8 platform will be critical to the Windows Store's 
+						overall success. I hope that CSG Pro gets an opportunity to help make Zappos.com's Windows Store application 
+						a reality.</Paragraph>
+				</RichTextBlock>
+				<Button x:Name="CloseJamesQuoteButton" Click="CloseJamesQuoteButton_Click_1" Style="{StaticResource QuoteCloseButtonStyle}"/>
+			</StackPanel>
+		</Border>
 	</Grid>
 </common:UserControlBase>
