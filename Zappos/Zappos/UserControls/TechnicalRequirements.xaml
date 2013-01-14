@@ -8,9 +8,259 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="768"
-    d:DesignWidth="1366">
+    d:DesignWidth="4098">
+	
+	<common:UserControlBase.Resources>
 
-	<Grid Background="Gray">
-		<TextBlock FontSize="80" Margin="50,200,0,0">Technical Requirements</TextBlock>
-	</Grid>
+		<Style x:Key="DetailPageRichTextBlockStyleLight" TargetType="RichTextBlock" BasedOn="{StaticResource DetailPageRichTextBlockStyleLight}">
+			<Setter Property="FontSize" Value="22"/>
+			<Setter Property="LineHeight" Value="24"/>
+		</Style>
+		
+	</common:UserControlBase.Resources>
+
+	<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+		<Grid Background="#FFFFFFFF" Width="4098">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="180"/>
+				<RowDefinition Height="100"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="100"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="5*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Text="Technical Requirements" Style="{StaticResource DetailPageTitleStyleLight}" 
+				   Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8"/>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="1">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Home</Run>
+					<LineBreak/>
+					&#x25AA; Rotating featured items
+					<LineBreak/>
+					&#x25AA; Swipe to move forward/backward
+ 				 </Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">Navigation</Run>
+					<Run FontSize="18" FontStyle="Italic">(pending designs)</Run>
+					<LineBreak/>
+					&#x25AA; My Account
+					<LineBreak/>
+					&#x25AA; Favorites
+					<LineBreak/>
+					&#x25AA; My Cart
+					<LineBreak/>
+					&#x25AA; Search
+					<LineBreak/>
+					&#x25AA; Save Search
+					<LineBreak/>
+					&#x25AA; Saved Searches
+					<LineBreak/>
+					&#x25AA; Settings
+					<LineBreak/>
+					&#x25AA; Information
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="2">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Search</Run>
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">Additional Navigation</Run>
+					<Run FontSize="18" FontStyle="Italic">(pending designs)</Run>
+					<LineBreak/>
+					&#x25AA; Gift Cards
+					<LineBreak/>
+					&#x25AA; Brands
+					<LineBreak/>
+					&#x25AA; Browse All
+					<LineBreak/>
+					&#x25AA; Shoes
+					<LineBreak/>
+					&#x25AA; Clothing
+					<LineBreak/>
+					&#x25AA; At Home
+					<LineBreak/>
+					&#x25AA; Beauty
+					<LineBreak/>
+					&#x25AA; Accessories
+					<LineBreak/>
+					&#x25AA; Gift Cards
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="3">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Information Tabs</Run>
+					<LineBreak/>
+					<Run FontSize="18" FontStyle="Italic">Note – these items to be served to the app through Zappos and their servers</Run>
+					<LineBreak/>
+					&#x25AA; About
+					<LineBreak/>
+					&#x25AA; Amazon FAQ
+					<LineBreak/>
+					&#x25AA; FAQ
+					<LineBreak/>
+					&#x25AA; Tax Policy
+					<LineBreak/>
+					&#x25AA; Shipping &amp; Returns
+					<LineBreak/>
+					&#x25AA; Terms of User
+					<LineBreak/>
+					&#x25AA; License Agreement
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">Login</Run>
+					<LineBreak/>
+					&#x25AA; Email &amp; Password Prompt
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="4">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Registration Process</Run>
+					<LineBreak/>
+					&#x25AA; First/Last Name
+					<LineBreak/>
+					&#x25AA; Email Address
+					<Run FontSize="18" FontStyle="Italic">(dialog confirm)</Run>
+					<LineBreak/>
+					&#x25AA; Password
+					<LineBreak/>
+					&#x25AA; Password Confirmation
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">My Account Functionality</Run>
+					<LineBreak/>
+					&#x25AA; Order History
+					<LineBreak/>
+					&#x25AA; Track my Order
+					<LineBreak/>
+					&#x25AA; Start a Return
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="5">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Favorites</Run>
+					<LineBreak/>
+					&#x25AA; Share Products
+					<LineBreak/>
+					&#160;&#160;&#160;&#x25AA; Facebook
+					<LineBreak/>
+					&#160;&#160;&#160;&#x25AA; Message
+					<LineBreak/>
+					&#160;&#160;&#160;&#x25AA; Mail
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">My Cart</Run>
+					<LineBreak/>
+					&#x25AA; List items within cart
+					<LineBreak/>
+					<Run FontSize="18" FontStyle="Italic">&#160;&#160;&#160;Product Photo, Info, Item Price</Run>
+					<LineBreak/>
+					<Run FontSize="18" FontStyle="Italic">&#160;&#160;&#160;Quantity (+/-), Remove Item</Run>
+					<LineBreak/>
+					&#x25AA; Proceed to Checkout
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="6">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Gift Cards</Run>
+					<LineBreak/>
+					&#x25AA; Five SKUs
+					<LineBreak/>
+					&#x25AA; Details
+					<LineBreak/>
+					&#x25AA; Terms &amp; Conditions
+				</Paragraph>
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Brands</Run>
+					<LineBreak/>
+					&#x25AA; A-Z List
+					<Run FontSize="18" FontStyle="Italic">(includes shortcut menu)</Run>
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">Browse All</Run>
+					<LineBreak/>
+					&#x25AA; List of Categories
+					<LineBreak/>
+					<Run FontSize="18" FontStyle="Italic">Categories are hierarchal (JSON file served up by Zappos)</Run>
+				</Paragraph>				
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="7">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Product List Page</Run>
+					<LineBreak/>
+					&#x25AA; Sorting
+					<Run FontSize="18" FontStyle="Italic">(allows a user to select which properties to sort on, i.e. highest rating, brand etc…)</Run>
+					<LineBreak/>
+					&#x25AA; Each property has a list of values
+					<LineBreak/>
+					&#x25AA; Multiple filters can be combined
+				</Paragraph>
+				<Paragraph>
+					<Run FontWeight="Bold">Product Detail Page</Run>
+					<LineBreak/>
+					&#x25AA; Photos
+					<Run FontSize="18" FontStyle="Italic">(swipe to move through images)</Run>
+					<LineBreak/>
+					&#x25AA; Zoom
+					<Run FontSize="18" FontStyle="Italic">(navigating to a full screen photo gallery creates pinch to zoom functionality)</Run>
+					<LineBreak/>
+					&#x25AA; Product Video
+					<LineBreak/>
+					&#x25AA; Product Info
+					<Run FontSize="18" FontStyle="Italic">(Star rating, SKU, Price, Color Selection (photos reflect selected color), select size/width if applicable)</Run>
+					</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="8">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Customer Reviews</Run>
+					<LineBreak/>
+					&#x25AA; Star Rating
+					<Run FontSize="18" FontStyle="Italic">(Overall, Comfort, Style)</Run>
+					<LineBreak/>
+					&#x25AA; Comments
+					<LineBreak/>
+					&#x25AA; Size
+					<LineBreak/>
+					&#x25AA; Width
+					<LineBreak/>
+					&#x25AA; Arch
+					<LineBreak/>
+					&#x25AA; Name &amp; Location
+				</Paragraph>
+			</RichTextBlock>
+			<RichTextBlock Style="{StaticResource DetailPageRichTextBlockStyleLight}" Margin="10,0,40,0" Grid.Row="2" Grid.Column="9">
+				<Paragraph Margin="0,0,0,10">
+					<Run FontWeight="Bold">Checkout Process</Run>
+					<LineBreak/>
+					&#x25AA; Safe &amp; Secure Shipping
+					<Run FontSize="18" FontStyle="Italic">(popup)</Run>
+					<LineBreak/>
+					&#x25AA; Add address
+					<LineBreak/>
+					<Run FontSize="18" FontStyle="Italic">&#160;&#160;&#160;(includes ability to load from contacts)</Run>
+					<LineBreak/>
+					&#x25AA; Shipping Speed
+					<LineBreak/>
+					&#x25AA; Payment info
+					<Run FontSize="18" FontStyle="Italic">(new credit card)</Run>
+					<LineBreak/>
+					&#x25AA; Review Order
+					<LineBreak/>
+					&#x25AA; Order Confirmation/Thank you page
+				</Paragraph>
+			</RichTextBlock>
+			<Rectangle Style="{StaticResource SeparatorLineStyle}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="9"/>
+		</Grid>
+	</ScrollViewer>
 </common:UserControlBase>
