@@ -74,10 +74,12 @@ namespace Zappos.Pages
 			if (itemType != null)
 			{
 				var itemInstance = (UserControlBase)Activator.CreateInstance(itemType);
+				itemInstance.Name = "ContentUserControl";
 				itemInstance.Navigate += (navigateSender, navigateEventArgs) =>
 				{
 					this.Frame.Navigate(navigateEventArgs.PageType, navigateEventArgs.Parameter);
 				};
+				itemInstance.Name = "ContentUserControl";
 				Grid.SetRowSpan(itemInstance, 3);
 				MainGrid.Children.Insert(0, itemInstance);
 			}

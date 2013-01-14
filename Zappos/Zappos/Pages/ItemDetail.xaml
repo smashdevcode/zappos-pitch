@@ -20,7 +20,17 @@
 		</Grid.RowDefinitions>
 
 		<!-- NOTE Page content is dynamically loaded into this grid via the code behind -->
-		
+
+		<Grid x:Name="CSGLogo" Visibility="Collapsed" Grid.RowSpan="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Image Source="/Assets/CSGLogo.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="40,0"/>
+		</Grid>
+
 		<!-- Back button and page title -->
 		<Grid>
 			<Grid.ColumnDefinitions>
@@ -28,7 +38,7 @@
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
 			<Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}"/>
-			<Image Source="{StaticResource ZapposHeaderLogo}" Grid.Column="1" 
+			<Image x:Name="ZapposLogo" Source="{StaticResource ZapposHeaderLogo}" Grid.Column="1" 
 				   AutomationProperties.Name="Zappos.com" Margin="-30,0,0,0" Stretch="None" HorizontalAlignment="Left"/>
 		</Grid>
 
@@ -53,12 +63,27 @@
 				<!-- The back button and title have different styles when snapped -->
 				<VisualState x:Name="Snapped">
 					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="CSGLogo" Storyboard.TargetProperty="Visibility">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Visibility">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ZapposLogo" Storyboard.TargetProperty="Visibility">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="BreadcrumbMenu" Storyboard.TargetProperty="Visibility">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+						</ObjectAnimationUsingKeyFrames>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentUserControl" Storyboard.TargetProperty="Visibility">
+							<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+						</ObjectAnimationUsingKeyFrames>
+						<!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
 							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
-						</ObjectAnimationUsingKeyFrames>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+						</ObjectAnimationUsingKeyFrames>-->
+						<!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
 							<DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
-						</ObjectAnimationUsingKeyFrames>
+						</ObjectAnimationUsingKeyFrames>-->
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
